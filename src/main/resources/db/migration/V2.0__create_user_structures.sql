@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS app_user (
+    id ${type_serial} PRIMARY KEY,
+    created_on timestamp ${timestamp},
+    created_by int,
+    updated_on timestamp ${timestamp},
+    updated_by int,
+    status ${varchar}(25),
+    uuid ${varchar}(36),
+    email ${varchar}(45),
+    password ${varchar}(64),
+    first_name ${varchar}(20),
+    last_name ${varchar}(20),
+    role ${varchar}(20),
+    longitude ${numeric}(8, 5),
+    latitude ${numeric}(8, 5),
+    country ${varchar}(100),
+    city ${varchar}(100),
+    post_code ${varchar}(6),
+    post ${varchar}(100),
+    street ${varchar}(200),
+    contact ${varchar}(20)
+);
