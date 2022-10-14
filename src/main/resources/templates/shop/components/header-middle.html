@@ -10,6 +10,14 @@
             		</div>
             		<div class="col-sm-8">
                 		<div class="shop-menu pull-right">
+                    		<ul class="nav navbar-nav">
+                        		<li th:each="middleMenu : ${middleMenus}">
+									<a th:href="${middleMenu.url}" th:classappend="${middleMenu.classState}">
+										<i th:classappend="${middleMenu.classType}"></i>
+										<span th:text="${middleMenu.textValue}">...</span>
+									</a>
+								</li>
+                    		</ul>
                 		</div>
             		</div>
         		</div>

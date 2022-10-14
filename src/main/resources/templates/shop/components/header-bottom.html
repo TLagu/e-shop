@@ -11,6 +11,15 @@
                     		</button>
                 		</div>
                 		<div class="mainmenu pull-left">
+                    		<ul class="nav navbar-nav collapse navbar-collapse">
+                        		<li th:each="bottomMenu : ${bottomMenus}">
+									<a
+										th:classappend="${#strings.equals(bottomMenu.classState, '')} ? '' : ${bottomMenu.classState}"
+										th:text="${bottomMenu.textValue}"
+										th:href="${bottomMenu.url}"
+									>...</a>
+								</li>
+                    		</ul>
                 		</div>
             		</div>
             		<div class="col-sm-3">

@@ -6,10 +6,20 @@
                     <ol class="carousel-indicators">
                         <li
                                 data-target="#slider-carousel"
+                                th:each="slider, iStat : ${sliders}"
+                                th:data-slide-to="${iStat.index}"
+                                th:classappend="${iStat.first} ? 'active'"
                         ></li>
                     </ol>
 
                     <div class="carousel-inner">
+                        <div class="item" th:each="slider, iStat : ${sliders}" th:classappend="${iStat.first} ? 'active'">
+                            <div class="col-sm-12">
+                                <p th:text="${slider.model}">...</p>
+                                <p th:text="${slider.description}">...</p>
+                                <button type="button" class="btn btn-default get">Get it now</button>
+                            </div>
+                        </div>
                     </div>
 
                     <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
