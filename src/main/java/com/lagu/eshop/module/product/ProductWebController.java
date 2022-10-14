@@ -58,7 +58,7 @@ public class ProductWebController {
      * Root and home page
      * @since 1.0
      * @param model Model attributes
-     * @param request Http Servlet Request
+     * @param request HTTP Servlet Request
      * @param authentication Security information
      * @return page
      */
@@ -79,7 +79,7 @@ public class ProductWebController {
      * Contact page
      * @since 1.2
      * @param model Model attributes
-     * @param request Http Servlet Request
+     * @param request HTTP Servlet Request
      * @param authentication Security information
      * @return page
      */
@@ -147,7 +147,7 @@ public class ProductWebController {
      * @since 1.2
      * @param uuid Project UUID
      * @param model Model attributes
-     * @param request Http Servlet Request
+     * @param request HTTP Servlet Request
      * @param authentication Security information
      * @return page
      */
@@ -172,7 +172,7 @@ public class ProductWebController {
      * @since 1.2
      * @param search Search string
      * @param model Model attributes
-     * @param request Http Servlet Request
+     * @param request HTTP Servlet Request
      * @param authentication Security information
      * @return page
      */
@@ -196,7 +196,7 @@ public class ProductWebController {
     /**
      * Common page setup
      * @since 1.1
-     * @param request Http Servlet Request
+     * @param request HTTP Servlet Request
      * @param authentication Security information
      */
     private void setPageSetup(HttpServletRequest request, Authentication authentication) {

@@ -16,3 +16,4 @@ Commits:
 6. Stage 4: Product detail page and search
 7. Stage 5: Contact page
 8. Stage 6: User/Admin authorization and registering account
+9. Stage 6: User account page
