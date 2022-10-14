@@ -57,9 +57,9 @@ public class ProductWebController {
     /**
      * Root and home page
      * @since 1.0
-     * @param model
-     * @param request
-     * @return
+     * @param model Model attributes
+     * @param request Http Servlet Request
+     * @return page
      */
     @GetMapping({"/", "/home"})
     public String slider(
@@ -71,6 +71,23 @@ public class ProductWebController {
         model.addAttribute("sliders", randomForSlider);
         setCommonModelSettings(model);
         return "shop/index";
+    }
+
+    /**
+     * Contact page
+     * @since 1.2
+     * @param model Model attributes
+     * @param request Http Servlet Request
+     * @return page
+     */
+    @GetMapping({"/contact"})
+    public String contact(
+            Model model,
+            HttpServletRequest request
+    ) {
+        setPageSetup(request);
+        setCommonModelSettings(model);
+        return "shop/contact";
     }
 
     /**

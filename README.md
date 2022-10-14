@@ -1,5 +1,8 @@
 # e-shop
 E-shop project
+Info:
+1. Task scheduler: https://docs.google.com/spreadsheets/d/1XQr-ch1mCtY853IDO-oxENZAHNwbsS8wynzmEkldftc/edit?usp=sharing
+2. Layout: https://demo.themeum.com/html/eshopper/
 
 Commits:
 0. Initial commit
@@ -9,3 +12,4 @@ Commits:
 4. Stage 3: Creation of a slider and menu
 5. Stage 4: Product page and javadocs
 6. Stage 4: Product detail page and search
+7. Stage 5: Contact page

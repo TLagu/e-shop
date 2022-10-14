@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7a9e88-f1b0-4f8d-a753-f281195b3b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/product-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/product-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/product/ProductWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/product/ProductWebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/product/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/product/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/product/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shop/components/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/praca/java/eshop/eshop/src/main/resources/templates/shop/components",
+    "last_opened_file_path": "E:/praca/java/eshop/eshop/src/main/resources/templates/shop",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   },
@@ -71,8 +69,8 @@
       <recent name="com.lagu.eshop.product.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop\components" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop" />
+      <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop\components" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\img" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\css" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\fonts" />
@@ -114,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665688602108</updated>
-      <workItem from="1665688604702" duration="44377000" />
+      <workItem from="1665688604702" duration="47389000" />
     </task>
     <servers />
   </component>
@@ -142,7 +140,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lagu/eshop/product/ProductWebController.java</url>
-          <line>99</line>
+          <line>116</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
