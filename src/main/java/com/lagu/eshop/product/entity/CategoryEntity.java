@@ -1,5 +1,6 @@
 package com.lagu.eshop.product.entity;
 
+import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -10,10 +11,16 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Set;
 
+/**
+ * Product categories
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
 @Entity
 @Table(name = "category")
 @SQLDelete(sql = "UPDATE category SET status = 'DELETED' WHERE id = ?")
 @Where(clause = "status = 'ACTIVE'")
+@Getter
 public class CategoryEntity implements Serializable {
 
     @Id
@@ -56,17 +63,9 @@ public class CategoryEntity implements Serializable {
     @OneToMany(mappedBy = "category", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<TemplateEntity> templates;
 
-    public Long getId() {
-        return id;
-    }
-
     public CategoryEntity setId(Long id) {
         this.id = id;
         return this;
-    }
-
-    public LocalDateTime getCreatedOn() {
-        return createdOn;
     }
 
     public CategoryEntity setCreatedOn(LocalDateTime createdOn) {
@@ -74,17 +73,9 @@ public class CategoryEntity implements Serializable {
         return this;
     }
 
-    public Long getCreatedBy() {
-        return createdBy;
-    }
-
     public CategoryEntity setCreatedBy(Long createdBy) {
         this.createdBy = createdBy;
         return this;
-    }
-
-    public LocalDateTime getUpdatedOn() {
-        return updatedOn;
     }
 
     public CategoryEntity setUpdatedOn(LocalDateTime updatedOn) {
@@ -92,17 +83,9 @@ public class CategoryEntity implements Serializable {
         return this;
     }
 
-    public Long getUpdatedBy() {
-        return updatedBy;
-    }
-
     public CategoryEntity setUpdatedBy(Long updatedBy) {
         this.updatedBy = updatedBy;
         return this;
-    }
-
-    public Status getStatus() {
-        return status;
     }
 
     public CategoryEntity setStatus(Status status) {
@@ -110,17 +93,9 @@ public class CategoryEntity implements Serializable {
         return this;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public CategoryEntity setName(String name) {
         this.name = name;
         return this;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public CategoryEntity setDescription(String description) {
@@ -128,17 +103,9 @@ public class CategoryEntity implements Serializable {
         return this;
     }
 
-    public CategoryEntity getParent() {
-        return parent;
-    }
-
     public CategoryEntity setParent(CategoryEntity parent) {
         this.parent = parent;
         return this;
-    }
-
-    public Set<CategoryEntity> getChildren() {
-        return children;
     }
 
     public CategoryEntity setChildren(Set<CategoryEntity> children) {
@@ -146,12 +113,9 @@ public class CategoryEntity implements Serializable {
         return this;
     }
 
-    public Set<TemplateEntity> getTemplates() {
-        return templates;
-    }
-
     public CategoryEntity setTemplates(Set<TemplateEntity> templates) {
         this.templates = templates;
         return this;
     }
+
 }

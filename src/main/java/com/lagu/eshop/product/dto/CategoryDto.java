@@ -1,7 +1,15 @@
 package com.lagu.eshop.product.dto;
 
+import lombok.Getter;
+
 import java.util.Set;
 
+/**
+ * DTO for product categories
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
+@Getter
 public class CategoryDto {
     private Long id;
     private String name;
@@ -9,17 +17,9 @@ public class CategoryDto {
     private CategoryDto parent;
     private Set<TemplateDto> templates;
 
-    public Long getId() {
-        return id;
-    }
-
     public CategoryDto setId(Long id) {
         this.id = id;
         return this;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public CategoryDto setName(String name) {
@@ -27,17 +27,9 @@ public class CategoryDto {
         return this;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     public CategoryDto setDescription(String description) {
         this.description = description;
         return this;
-    }
-
-    public CategoryDto getParent() {
-        return parent;
     }
 
     public CategoryDto setParent(CategoryDto parent) {
@@ -45,15 +37,16 @@ public class CategoryDto {
         return this;
     }
 
-    public Set<TemplateDto> getTemplates() {
-        return templates;
-    }
-
     public CategoryDto setTemplates(Set<TemplateDto> templates) {
         this.templates = templates;
         return this;
     }
 
+    /**
+     * Object status verification (new/existing)
+     * @since 1.0
+     * @return Status whether the object is new or existing
+     */
     public boolean isNew() {
         return id == null || id == 0;
     }

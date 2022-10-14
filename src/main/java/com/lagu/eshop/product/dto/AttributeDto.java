@@ -1,30 +1,26 @@
 package com.lagu.eshop.product.dto;
 
+import lombok.Getter;
+
+/**
+ * DTO for additional product attributes
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
+@Getter
 public class AttributeDto {
     private Long id;
     private String name;
     private String description;
-
-    public Long getId() {
-        return id;
-    }
 
     public AttributeDto setId(Long id) {
         this.id = id;
         return this;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public AttributeDto setName(String name) {
         this.name = name;
         return this;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public AttributeDto setDescription(String description) {

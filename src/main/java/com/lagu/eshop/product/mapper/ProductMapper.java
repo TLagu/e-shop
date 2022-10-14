@@ -8,6 +8,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Product mapper (DTO)
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
 public class ProductMapper {
 
     public static ProductDto map(ProductEntity entity, AttributeDto attribute) {

@@ -1,7 +1,15 @@
 package com.lagu.eshop.product.dto;
 
+import lombok.Getter;
+
 import java.util.Set;
 
+/**
+ * Basic parameters of products
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
+@Getter
 public class ProductDto {
 
     private String uuid;
@@ -16,17 +24,9 @@ public class ProductDto {
     private boolean wishlist;
     private boolean compare;
 
-    public String getUuid() {
-        return uuid;
-    }
-
     public ProductDto setUuid(String uuid) {
         this.uuid = uuid;
         return this;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public ProductDto setModel(String model) {
@@ -34,17 +34,9 @@ public class ProductDto {
         return this;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     public ProductDto setDescription(String description) {
         this.description = description;
         return this;
-    }
-
-    public CategoryDto getCategory() {
-        return category;
     }
 
     public ProductDto setCategory(CategoryDto category) {
@@ -52,17 +44,9 @@ public class ProductDto {
         return this;
     }
 
-    public Set<AttributeDto> getAttributes() {
-        return attributes;
-    }
-
     public ProductDto setAttributes(Set<AttributeDto> attributes) {
         this.attributes = attributes;
         return this;
-    }
-
-    public Double getPrice() {
-        return price;
     }
 
     public ProductDto setPrice(Double price) {
@@ -70,17 +54,9 @@ public class ProductDto {
         return this;
     }
 
-    public String getPath() {
-        return path;
-    }
-
     public ProductDto setPath(String path) {
         this.path = path;
         return this;
-    }
-
-    public String getCode() {
-        return code;
     }
 
     public ProductDto setCode(String code) {
@@ -88,17 +64,9 @@ public class ProductDto {
         return this;
     }
 
-    public boolean getCart() {
-        return cart;
-    }
-
     public ProductDto setCart(boolean cart) {
         this.cart = cart;
         return this;
-    }
-
-    public boolean getWishlist() {
-        return wishlist;
     }
 
     public ProductDto setWishlist(boolean wishlist) {
@@ -106,15 +74,16 @@ public class ProductDto {
         return this;
     }
 
-    public boolean getCompare() {
-        return compare;
-    }
-
     public ProductDto setCompare(boolean compare) {
         this.compare = compare;
         return this;
     }
 
+    /**
+     * Object status verification (new/existing)
+     * @since 1.0
+     * @return Status whether the object is new or existing
+     */
     public boolean isNew() {
         return uuid == null || uuid.isBlank();
     }

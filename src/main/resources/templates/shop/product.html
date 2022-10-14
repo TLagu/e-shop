@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="shop/components/head :: fragment">
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<!--header_top-->
+		<div th:replace="shop/components/header-top :: fragment"></div>
+		<!--header-middle-->
+		<div th:replace="shop/components/header-middle :: fragment"></div>
+		<!--header-bottom-->
+		<div th:replace="shop/components/header-bottom :: fragment"></div>
+	</header><!--/header-->
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<!--left-sidebar-->
+					<div th:replace="shop/components/left-sidebar :: fragment"></div>
+				</div>
+				<div class="col-sm-9 padding-right">
+					<!--features_items-->
+					<div class="features_items"><!--features_items-->
+						<div class="row">
+							<h2 class="title text-center">Produkty</h2>
+							<div th:replace="shop/components/features-items :: fragment"></div>
+						</div>
+						<div class="row">
+						<!--pagination-->
+							<div th:replace="shop/components/pagination :: fragment"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--footer-->
+	<div th:replace="shop/components/footer :: fragment"></div>
+
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

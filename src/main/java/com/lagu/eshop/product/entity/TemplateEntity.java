@@ -1,5 +1,6 @@
 package com.lagu.eshop.product.entity;
 
+import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -9,11 +10,19 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * List of additional product attributes specific to a specific product category added when creating a product object
+ * Different product category can have
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
 @Entity
 @Table(name = "category_attribute")
 @SQLDelete(sql = "UPDATE category_attribute SET status = 'DELETED' WHERE id = ?")
 @Where(clause = "status = 'ACTIVE'")
+@Getter
 public class TemplateEntity implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_attribute_generator")
     @SequenceGenerator(name = "category_attribute_generator", sequenceName = "category_attribute_id_seq", allocationSize = 1)
@@ -45,29 +54,9 @@ public class TemplateEntity implements Serializable {
     @Column(name = "name")
     private String name;
 
-    public Long getId() {
-        return id;
-    }
-
-    public LocalDateTime getCreatedOn() {
-        return createdOn;
-    }
-
-    public Long getCreatedBy() {
-        return createdBy;
-    }
-
     public TemplateEntity setCreatedBy(Long createdBy) {
         this.createdBy = createdBy;
         return this;
-    }
-
-    public LocalDateTime getUpdatedOn() {
-        return updatedOn;
-    }
-
-    public Long getUpdatedBy() {
-        return updatedBy;
     }
 
     public TemplateEntity setUpdatedBy(Long updatedBy) {
@@ -75,17 +64,9 @@ public class TemplateEntity implements Serializable {
         return this;
     }
 
-    public Status getStatus() {
-        return status;
-    }
-
     public TemplateEntity setStatus(Status status) {
         this.status = status;
         return this;
-    }
-
-    public CategoryEntity getCategory() {
-        return category;
     }
 
     public TemplateEntity setCategory(CategoryEntity category) {
@@ -93,12 +74,9 @@ public class TemplateEntity implements Serializable {
         return this;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public TemplateEntity setName(String name) {
         this.name = name;
         return this;
     }
+
 }

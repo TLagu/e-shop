@@ -1,5 +1,13 @@
 package com.lagu.eshop.product.entity;
 
+import lombok.Getter;
+
+/**
+ * Product status
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
+@Getter
 public enum Status {
     DELETED("Usunięte"),
     INACTIVE("Nieaktywne"),
@@ -11,8 +19,5 @@ public enum Status {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }
 

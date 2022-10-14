@@ -1,5 +1,6 @@
 package com.lagu.eshop.product.entity;
 
+import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -10,10 +11,16 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Set;
 
+/**
+ * Product
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
 @Entity
 @Table(name = "product")
 @SQLDelete(sql = "UPDATE product SET status = 'DELETED' WHERE id = ?")
 @Where(clause = "status = 'ACTIVE'")
+@Getter
 public class ProductEntity implements Serializable {
 
     @Id
@@ -65,17 +72,9 @@ public class ProductEntity implements Serializable {
     @OneToMany(mappedBy = "product", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<AttributeEntity> attributes;
 
-    public Long getId() {
-        return id;
-    }
-
     public ProductEntity setId(Long id) {
         this.id = id;
         return this;
-    }
-
-    public String getUuid() {
-        return uuid;
     }
 
     public ProductEntity setUuid(String uuid) {
@@ -83,17 +82,9 @@ public class ProductEntity implements Serializable {
         return this;
     }
 
-    public String getModel() {
-        return model;
-    }
-
     public ProductEntity setModel(String model) {
         this.model = model;
         return this;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public ProductEntity setDescription(String description) {
@@ -101,17 +92,9 @@ public class ProductEntity implements Serializable {
         return this;
     }
 
-    public LocalDateTime getCreatedOn() {
-        return createdOn;
-    }
-
     public ProductEntity setCreatedOn(LocalDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
-    }
-
-    public Long getCreatedBy() {
-        return createdBy;
     }
 
     public ProductEntity setCreatedBy(Long createdBy) {
@@ -119,17 +102,9 @@ public class ProductEntity implements Serializable {
         return this;
     }
 
-    public LocalDateTime getUpdatedOn() {
-        return updatedOn;
-    }
-
     public ProductEntity setUpdatedOn(LocalDateTime updatedOn) {
         this.updatedOn = updatedOn;
         return this;
-    }
-
-    public Long getUpdatedBy() {
-        return updatedBy;
     }
 
     public ProductEntity setUpdatedBy(Long updatedBy) {
@@ -137,17 +112,9 @@ public class ProductEntity implements Serializable {
         return this;
     }
 
-    public Status getStatus() {
-        return status;
-    }
-
     public ProductEntity setStatus(Status status) {
         this.status = status;
         return this;
-    }
-
-    public CategoryEntity getCategory() {
-        return category;
     }
 
     public ProductEntity setCategory(CategoryEntity category) {
@@ -155,17 +122,9 @@ public class ProductEntity implements Serializable {
         return this;
     }
 
-    public Set<AttributeEntity> getAttributes() {
-        return attributes;
-    }
-
     public ProductEntity setAttributes(Set<AttributeEntity> attributes) {
         this.attributes = attributes;
         return this;
-    }
-
-    public Double getPrice() {
-        return price;
     }
 
     public ProductEntity setPrice(Double price) {
@@ -173,21 +132,14 @@ public class ProductEntity implements Serializable {
         return this;
     }
 
-    public String getPath() {
-        return path;
-    }
-
     public ProductEntity setPath(String path) {
         this.path = path;
         return this;
-    }
-
-    public String getCode() {
-        return code;
     }
 
     public ProductEntity setCode(String code) {
         this.code = code;
         return this;
     }
+
 }

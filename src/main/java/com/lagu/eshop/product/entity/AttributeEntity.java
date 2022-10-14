@@ -1,5 +1,6 @@
 package com.lagu.eshop.product.entity;
 
+import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -9,10 +10,16 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * Additional product attributes
+ * @author Tomasz Łagowski
+ * @version 1.0
+ */
 @Entity
 @Table(name = "attribute")
 @SQLDelete(sql = "UPDATE attribute SET status = 'DELETED' WHERE id = ?")
 @Where(clause = "status = 'ACTIVE'")
+@Getter
 public class AttributeEntity implements Serializable {
 
     @Id
@@ -49,17 +56,9 @@ public class AttributeEntity implements Serializable {
     @Column(name = "description")
     private String description;
 
-    public Long getId() {
-        return id;
-    }
-
     public AttributeEntity setId(Long id) {
         this.id = id;
         return this;
-    }
-
-    public LocalDateTime getCreatedOn() {
-        return createdOn;
     }
 
     public AttributeEntity setCreatedOn(LocalDateTime createdOn) {
@@ -67,17 +66,9 @@ public class AttributeEntity implements Serializable {
         return this;
     }
 
-    public Long getCreatedBy() {
-        return createdBy;
-    }
-
     public AttributeEntity setCreatedBy(Long createdBy) {
         this.createdBy = createdBy;
         return this;
-    }
-
-    public LocalDateTime getUpdatedOn() {
-        return updatedOn;
     }
 
     public AttributeEntity setUpdatedOn(LocalDateTime updatedOn) {
@@ -85,17 +76,9 @@ public class AttributeEntity implements Serializable {
         return this;
     }
 
-    public Long getUpdatedBy() {
-        return updatedBy;
-    }
-
     public AttributeEntity setUpdatedBy(Long updatedBy) {
         this.updatedBy = updatedBy;
         return this;
-    }
-
-    public Status getStatus() {
-        return status;
     }
 
     public AttributeEntity setStatus(Status status) {
@@ -103,17 +86,9 @@ public class AttributeEntity implements Serializable {
         return this;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public AttributeEntity setName(String name) {
         this.name = name;
         return this;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public AttributeEntity setDescription(String description) {
@@ -121,12 +96,9 @@ public class AttributeEntity implements Serializable {
         return this;
     }
 
-    public ProductEntity getProduct() {
-        return product;
-    }
-
     public AttributeEntity setProduct(ProductEntity product) {
         this.product = product;
         return this;
     }
+
 }
