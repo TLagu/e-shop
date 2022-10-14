@@ -8,5 +8,4 @@ Commits:
 3. Stage 3: Create a page template and home page layout
 4. Stage 3: Creation of a slider and menu
 5. Stage 4: Product page and javadocs
-
-- 
+6. Stage 4: Product detail page and search

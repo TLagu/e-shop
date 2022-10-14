@@ -75,7 +75,7 @@ public class ProductService {
 
     /**
      * Getting products from page number
-     * @since 1.0
+     * @since 1.1
      * @param page Page number
      * @param size Number of products on the page
      * @return List of products
@@ -89,6 +89,16 @@ public class ProductService {
                 size,
                 page
         );
+    }
+
+    /**
+     * Getting product by UUID
+     * @since 1.1
+     * @param uuid Product UUID
+     * @return Product
+     */
+    public ProductDto getDtoByUuid(String uuid) {
+        return ProductMapper.map(productRepository.getByUuid(uuid), null);
     }
 
 }

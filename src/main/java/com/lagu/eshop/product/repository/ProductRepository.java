@@ -47,4 +47,12 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long>, J
     @Query("SELECT p FROM ProductEntity p WHERE p.category IN :ids")
     Page<ProductEntity> findByCategories(List<CategoryEntity> ids, Pageable pageable);
 
+    /**
+     * Getting product by UUID
+     * @since 1.1
+     * @param uuid Product UUID
+     * @return Product
+     */
+    ProductEntity getByUuid(String uuid);
+
 }

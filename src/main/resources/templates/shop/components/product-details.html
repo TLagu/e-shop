@@ -1,0 +1,42 @@
+<div class="col-sm-9 padding-right" th:fragment="fragment">
+							<!--product-details-->
+							<div class="product-details">
+								<div class="col-sm-5">
+									<div class="view-product">
+										<img th:src="${productDetails.path}" alt="" />
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<!--/product-information-->
+									<div class="product-information">
+										<h2 th:text="${productDetails.model}"> ... </h2>
+										<p th:text="${productDetails.code}"> ... </p>
+										<span>
+											<span th:text="${#numbers.formatDecimal(productDetails.price, 3, 'WHITESPACE', 2, 'COMMA')}"> ... </span><span>PLN</span>
+										</span>
+									</div>
+									<!--/product-information-->
+								</div>
+							</div>
+							<!--/product-details-->
+							<!--category-tab-->
+							<div class="category-tab shop-details-tab">
+								<div class="col-sm-12">
+									<ul class="nav nav-tabs">
+										<li class="active"><a href="#details" data-toggle="tab">Szczegóły</a></li>
+									</ul>
+								</div>
+								<div class="tab-content">
+									<div class="tab-pane fade active in" id="details" >
+										<div class="col-sm-12">
+											<p><b>Opis</b>: <span th:text="${productDetails.description}"> ... </span></p>
+											<ul>
+												<li th:each="details : ${productDetails.attributes}" style="background: white;">
+													<b><span th:text="${details.name}"> ... </span>: </b>
+													<span th:text="${details.description}"> ... </span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div><!--/category-tab-->

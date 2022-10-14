@@ -12,10 +12,13 @@ import com.lagu.eshop.product.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +27,7 @@ import java.util.stream.Collectors;
 /**
  * Product web controller
  * @author Tomasz Łagowski
- * @version 1.1
+ * @version 1.2
  */
 @Controller
 public class ProductWebController {
@@ -110,6 +113,52 @@ public class ProductWebController {
         List<CategoryEntity> categories = categoryService.getMainCategoryWithSubcategories();
         model.addAttribute("products", products);
         model.addAttribute("pages", pageWrapper.getPageWrapper());
+        model.addAttribute("pageSetup", new PageSetup(uri, isLogged));
+        model.addAttribute("categories", categories);
+        setCommonModelSettings(model);
+        return "shop/product";
+    }
+
+    /**
+     * Product details
+     * @since 1.2
+     * @param uuid Project UUID
+     * @param model Model attributes
+     * @param request Http Servlet Request
+     * @return page
+     */
+    @GetMapping(value = {"/shop/details/{uuid}"})
+    public String details(
+            @PathVariable String uuid,
+            Model model,
+            HttpServletRequest request
+    ) {
+        setPageSetup(request);
+        ProductDto product = service.getDtoByUuid(uuid);
+        List<CategoryEntity> categories = categoryService.getMainCategoryWithSubcategories();
+        model.addAttribute("productDetails", product);
+        model.addAttribute("categories", categories);
+        setCommonModelSettings(model);
+        return "shop/product-details";
+    }
+
+    /**
+     * Search product by string
+     * @since 1.2
+     * @param search Search string
+     * @param model Model attributes
+     * @param request Http Servlet Request
+     * @return page
+     */
+    @PostMapping(value = {"/shop"})
+    public String search(String search, Model model, HttpServletRequest request) {
+        setPageSetup(request);
+        List<ProductDto> products = new ArrayList<>();
+        if (search.length() > 2) {
+            products = service.searchProducts(search);
+        }
+        List<CategoryEntity> categories = categoryService.getMainCategoryWithSubcategories();
+        model.addAttribute("products", products);
         model.addAttribute("pageSetup", new PageSetup(uri, isLogged));
         model.addAttribute("categories", categories);
         setCommonModelSettings(model);
