@@ -1,11 +1,12 @@
 package com.lagu.eshop.core.pagination;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Object used to build the menu
  * @author Tomasz Łagowski
- * @version 1.0
+ * @version 1.1
  */
 public class MenuNavigator {
 
@@ -32,6 +33,13 @@ public class MenuNavigator {
             new Menu("", "", "Kontakt", "/contact")
     );
 
+    private final List<Menu> loggedAdminMiddleMenu = List.of(
+            new Menu("", "fa fa-suitcase", "Produkty", "/admin/product"),
+            new Menu("", "fa fa-gear", "Słowniki", "/admin/category"),
+            new Menu("", "fa fa-user", "Użytkownicy", "/admin/user"),
+            new Menu("", "fa fa-lock", "Wylogowanie", "/logout")
+    );
+
     /**
      * The method that generates the bottom menu content for the user
      * @since 1.0
@@ -52,6 +60,26 @@ public class MenuNavigator {
      */
     public List<Menu> getUserMiddleMenu(String url, boolean isLogged) {
         return getMenu(url, (isLogged) ? loggedUserMiddleMenu : userMiddleMenu);
+    }
+
+    /**
+     * The method that generates the bottom menu content for the admin
+     * @since 1.1
+     * @param url Relative website address
+     * @return Menu data list
+     */
+    public List<Menu> getAdminBottomMenu(String url) {
+        return getMenu(url, new ArrayList<>());
+    }
+
+    /**
+     * The method that generates the middle menu content for the admin
+     * @since 1.1
+     * @param url Relative website address
+     * @return Menu data list
+     */
+    public List<Menu> getAdminMiddleMenu(String url) {
+        return getMenu(url, loggedAdminMiddleMenu);
     }
 
     /**

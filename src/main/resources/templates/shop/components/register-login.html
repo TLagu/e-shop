@@ -1,0 +1,64 @@
+<section id="form" th:fragment="fragment"><!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form"><!--login form-->
+                    <h2>Zaloguj się do konta</h2>
+                    <form th:action="@{/login}" th:object="${user}" method="post">
+                        <input type="email" th:field="*{email}" placeholder="Adres e-mail" />
+                        <input type="password" th:field="*{password}" placeholder="Hasło"/>
+                        <span>
+                            <input type="checkbox" class="checkbox">
+                            Pozostaw mnie zalogowanym
+                        </span>
+                        <button type="submit" class="btn btn-default">Loguj</button>
+                    </form>
+                </div><!--/login form-->
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">LUB</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="signup-form"><!--sign up form-->
+                    <h2>Rejestracja nowego użytkownika!</h2>
+                    <form th:action="@{/process-register}" th:object="${user}" method="post">
+                        <input type="email" th:field="*{email}" placeholder="Adres e-mail ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                        <input type="password" th:field="*{password}" placeholder="Hasło ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+                        <input type="text" th:field="*{firstName}" placeholder="Imię ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+                        <input type="text" th:field="*{lastName}" placeholder="Nazwisko ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+                        <input type="text" th:field="*{longitude}" placeholder="Długość geograficzna ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('longitude')}" th:errors="*{longitude}"></div>
+                        <input type="text" th:field="*{latitude}" placeholder="Szerokość geograficzna ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('latitude')}" th:errors="*{latitude}"></div>
+                        <input type="text" th:field="*{country}" placeholder="Kraj ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('country')}" th:errors="*{country}"></div>
+                        <input type="text" th:field="*{city}" placeholder="Miejscowość ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></div>
+                        <input type="text" th:field="*{postCode}" placeholder="Kod pocztowy ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('postCode')}" th:errors="*{postCode}"></div>
+                        <input type="text" th:field="*{post}" placeholder="Poczta ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('post')}" th:errors="*{post}"></div>
+                        <input type="text" th:field="*{street}" placeholder="Ulica ..."/>
+                        <div class="alert alert-warning" th:if="${#fields.hasErrors('street')}" th:errors="*{street}"></div>
+                        <div style="margin-bottom: 10px">
+                            <select id="contact" th:field="*{contact}">
+                                <option
+                                        th:each="contact : ${contacts}"
+                                        th:value="${contact}"
+                                        th:text="${contact}"
+                                        th:selected="${user.contact == contact}"
+                                ></option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-default">Rejestruj</button>
+                    </form>
+                    <h3 th:text="${comment}">...</h3>
+                </div><!--/sign up form-->
+            </div>
+        </div>
+    </div>
+</section><!--/form-->

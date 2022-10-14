@@ -3,6 +3,8 @@ E-shop project
 Info:
 1. Task scheduler: https://docs.google.com/spreadsheets/d/1XQr-ch1mCtY853IDO-oxENZAHNwbsS8wynzmEkldftc/edit?usp=sharing
 2. Layout: https://demo.themeum.com/html/eshopper/
+3. User login/password: user1@wp.pl/user1, user2@wp.pl/user2
+4. Admin login/password: admin@wp.pl/admin
 
 Commits:
 0. Initial commit
@@ -13,3 +15,4 @@ Commits:
 5. Stage 4: Product page and javadocs
 6. Stage 4: Product detail page and search
 7. Stage 5: Contact page
+8. Stage 6: User/Admin authorization and registering account

@@ -1,0 +1,30 @@
+<div class="table-responsive cart_info" th:fragment="fragment">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr class="cart_menu">
+                        <td class="cart_description">Produkt</td>
+                        <td class="cart_description">Opis</td>
+                        <td class="cart_price">Cena</td>
+                        <td class="image">Akcja</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="product : ${products}">
+                        <td class="cart_description">
+                            <h4><a th:href="'/admin/product/' + ${product.uuid}" th:text="${product.model}"> ... </a></h4>
+                            <p th:text="${product.code}"> ... </p>
+                        </td>
+                        <td class="cart_description">
+                            <h4 th:text="${product.description}"> ... </h4>
+                        </td>
+                        <td class="cart_price">
+                            <h4><span th:text="${#numbers.formatDecimal(product.price, 3, 'WHITESPACE', 2, 'COMMA')}"> ... </span> PLN</h4>
+                        </td>
+                        <td>
+                            <a th:href="'/admin/product/' + ${product.uuid} + '/delete'"><i class="fa fa-times fa-delete fa-action">&nbsp;</i></a>
+                            <a th:href="'/admin/product/' + ${product.uuid} + '/edit'"><i class="fa fa-edit fa-action">&nbsp;</i></a>
+                        </td><!--fa-plus-->
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
