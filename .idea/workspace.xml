@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7a9e88-f1b0-4f8d-a753-f281195b3b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/AdminCategoryWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-category-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-category-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-category-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-category-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-category-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-category-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/user/AdminUserWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-user-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-user-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-user-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-user-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-user-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-user-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/TemplateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/TemplateEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/CategoryFormMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/CategoryFormMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/TemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/TemplateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/38/foto.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/praca/java/eshop/eshop/src/main/resources/templates/shop/components",
+    "last_opened_file_path": "E:/praca/java/eshop/eshop/src/main/resources/templates/shop",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   },
@@ -78,8 +73,8 @@
       <recent name="com.lagu.eshop.product.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop\components" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop" />
+      <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop\components" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\img" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\css" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\fonts" />
@@ -121,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665688602108</updated>
-      <workItem from="1665688604702" duration="94508000" />
+      <workItem from="1665688604702" duration="95934000" />
     </task>
     <servers />
   </component>

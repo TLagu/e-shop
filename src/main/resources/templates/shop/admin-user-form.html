@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="shop/components/head :: fragment">
+</head><!--/head-->
+
+<body>
+<header id="header"><!--header-->
+    <!--header_top-->
+    <div th:replace="shop/components/header-top :: fragment"></div>
+    <!--header-middle-->
+    <div th:replace="shop/components/header-middle :: fragment"></div>
+    <!--header-bottom-->
+    <div th:replace="shop/components/header-bottom :: fragment"></div>
+</header><!--/header-->
+
+<!--cart_items-->
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li class="active" th:if="${userForm.uuid != null}">Edycja użytkownika</li>
+                <li class="active" th:if="${userForm.uuid == null}">Dodanie użytkownika</li>
+            </ol>
+        </div>
+        <div th:replace="shop/components/admin-user-form :: fragment"></div>
+    </div>
+</section>
+<!--/#cart_items-->
+<!--footer-->
+<div th:replace="shop/components/footer :: fragment"></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/price-range.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

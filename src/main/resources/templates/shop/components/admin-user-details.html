@@ -1,0 +1,32 @@
+<div class="table-responsive cart_info" th:fragment="fragment">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr class="cart_menu">
+                        <td class="cart_description">Atrybut</td>
+                        <td class="cart_description">Wartość</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="cart_price"><h4>Uuid</h4></td>
+                        <td class="cart_price"><h4 th:text="${user.uuid}"> ... </h4></td>
+                    </tr>
+                    <tr>
+                        <td class="cart_price"><h4>E-mail</h4></td>
+                        <td class="cart_price"><h4 th:text="${user.email}"> ... </h4></td>
+                    </tr>
+                    <tr>
+                        <td class="cart_price"><h4>Imię</h4></td>
+                        <td class="cart_price"><h4 th:text="${user.firstName}"> ... </h4></td>
+                    </tr>
+                    <tr>
+                        <td class="cart_price"><h4>Nazwisko</h4></td>
+                        <td class="cart_price"><h4 th:text="${user.lastName}"> ... </h4></td>
+                    </tr>
+                    <tr>
+                        <td class="cart_price"><h4>Rola</h4></td>
+                        <td class="cart_price"><h4 th:text="${user.role}"> ... </h4></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>

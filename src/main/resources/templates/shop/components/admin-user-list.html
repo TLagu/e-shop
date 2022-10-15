@@ -1,0 +1,29 @@
+<div class="table-responsive cart_info" th:fragment="fragment">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr class="cart_menu">
+                        <td class="cart_description">Użytkownik</td>
+                        <td class="cart_description">e-mail</td>
+                        <td class="cart_description">Rola</td>
+                        <td class="image">Akcja</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user : ${users}">
+                        <td class="cart_description">
+                            <h4><a th:href="'/admin/user/' + ${user.uuid}" th:text="${user.lastName} + ' ' + ${user.firstName}"> ... </a></h4>
+                        </td>
+                        <td class="cart_description">
+                            <h4 th:text="${user.email}"> ... </h4>
+                        </td>
+                        <td class="cart_description">
+                            <h4 th:text="${user.role}"></h4>
+                        </td>
+                        <td>
+                            <a th:href="'/admin/user/' + ${user.uuid} + '/delete'"><i class="fa fa-times fa-delete fa-action">&nbsp;</i></a>
+                            <a th:href="'/admin/user/' + ${user.uuid} + '/edit'"><i class="fa fa-edit fa-action">&nbsp;</i></a>
+                        </td><!--fa-plus-->
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
