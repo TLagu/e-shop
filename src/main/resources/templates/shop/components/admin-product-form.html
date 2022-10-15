@@ -1,0 +1,69 @@
+<div class="table-responsive cart_info" th:fragment="fragment">
+    <form th:action="@{/admin/product}" th:object="${productForm}" method="post" enctype="multipart/form-data">
+        <div class="chose_area">
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Model produktu:</label>
+                    <input type="text" th:field="*{model}" placeholder="Model produktu...">
+                    <div class="alert alert-warning" th:if="${#fields.hasErrors('model')}" th:errors="*{model}"></div>
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Opis produktu:</label>
+                    <input type="text" th:field="*{description}" placeholder="Opis produktu...">
+                    <div class="alert alert-warning" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div>
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Kategoria:</label>
+                    <select id="category" name="category">
+                        <option
+                                th:each="category : ${categories}"
+                                th:value="${category.id}"
+                                th:text="${category.name}"
+                                th:selected="${productForm?.category} == ${category.id}"
+                        ></option>
+                    </select>
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Cena:</label>
+                    <input type="text" th:field="*{price}" placeholder="Cena...">
+                    <div class="alert alert-warning" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div>
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Kod produktu:</label>
+                    <input type="text" th:field="*{code}" placeholder="Kod produktu...">
+                    <div class="alert alert-warning" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></div>
+                </li>
+            </ul>
+            <ul class="user_info" th:each="attribute, i : *{attributes}">
+                <li class="single_field">
+                    <label><span th:text="*{attributes[__${i.index}__].name}"> ... </span>:</label>
+                    <input type="hidden" name="id" th:field="*{attributes[__${i.index}__].id}">
+                    <input type="hidden" name="name" th:field="*{attributes[__${i.index}__].name}">
+                    <input type="text" name="description" th:field="*{attributes[__${i.index}__].description}">
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Grafika produktu:</label>
+                    <input type="file" name="image" accept="image/jpeg" />
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <img th:src="${productForm.path}" alt="" />
+                </li>
+            </ul>
+            <button class="btn btn-default check_out" type="submit">Zapisz</button>
+            <a class="btn btn-default check_out"  href="/admin/product">Cancel</a>
+            <input type="hidden" name="uuid" th:value="*{uuid}">
+        </div>
+    </form>
+</div>

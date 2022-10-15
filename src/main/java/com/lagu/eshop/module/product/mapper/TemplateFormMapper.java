@@ -19,7 +19,6 @@ public class TemplateFormMapper {
                 .setStatus(Status.ACTIVE)
                 .setName(form.getName())
                 .setCategory(category);
-
     }
 
     /**

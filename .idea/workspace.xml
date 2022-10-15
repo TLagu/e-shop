@@ -5,40 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7a9e88-f1b0-4f8d-a753-f281195b3b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/CartWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/OrderWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CartDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CartForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/CartEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/OrderDetailsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/OrderEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/CartFormMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/CartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/OrderDetailsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/repository/CartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/repository/OrderDetailsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/OrderDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/ServiceTools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/cart-info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/order-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/order-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/order-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/AttributeForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/AttributeFormMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/FileUploadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/ProductFormMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-product-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-product-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-product-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-product-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/core/util/ControllerTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/core/util/ControllerTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/ProductWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/ProductWebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/AdminProductWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/AdminProductWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/TemplateFormMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/mapper/TemplateFormMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/repository/AttributeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/repository/AttributeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shop/components/features-items.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/features-items.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/TemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/TemplateService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/praca/java/eshop/eshop/src/main/resources/templates/shop/components",
+    "last_opened_file_path": "E:/praca/java/eshop/eshop/src/main/resources/templates/shop",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   },
@@ -98,8 +80,8 @@
       <recent name="com.lagu.eshop.product.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop\components" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop" />
+      <recent name="E:\praca\java\eshop\eshop\src\main\resources\templates\shop\components" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\img" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\css" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\fonts" />
@@ -141,7 +123,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665688602108</updated>
-      <workItem from="1665688604702" duration="73896000" />
+      <workItem from="1665688604702" duration="86787000" />
     </task>
     <servers />
   </component>
@@ -171,6 +153,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/ProductWebController.java</url>
           <line>122</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/ProductService.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/ProductService.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

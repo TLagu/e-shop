@@ -18,3 +18,4 @@ Commits:
 8. Stage 6: User/Admin authorization and registering account
 9. Stage 6: User account page
 10. Stage 7: Cart and order functionality
+11. Stage 8: Product pages (admin)
