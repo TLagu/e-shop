@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 /**
  * Product service
  * @author Tomasz Łagowski
- * @version 1.1
+ * @version 1.2
  */
 @Service
 public class ProductService {
@@ -99,6 +99,17 @@ public class ProductService {
      */
     public ProductDto getDtoByUuid(String uuid) {
         return ProductMapper.map(productRepository.getByUuid(uuid), null);
+    }
+
+    /**
+     * Get all
+     * @since 1.2
+     * @return List of products
+     */
+    public List<ProductDto> getAll() {
+        return productRepository.findAll().stream()
+                .map(p -> ProductMapper.map(p, null))
+                .collect(Collectors.toList());
     }
 
 }

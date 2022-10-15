@@ -1,0 +1,42 @@
+<!--/#do_action-->
+  <section id="do_action" th:fragment="fragment">
+    <div class="container">
+      <div class="heading">
+        <h3>Składanie zamówienia</h3>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <form th:action="@{/cart}" th:object="${order}" method="post">
+            <div class="chose_area">
+              <ul class="user_info">
+                <li class="single_field zip-field">
+                  <label>Ulica:</label>
+                  <input type="text" th:field="${order.street}" placeholder="Nazwa ulicy...">
+                </li>
+              </ul>
+              <ul class="user_info">
+                <li class="single_field zip-field">
+                  <label>Kod pocztowy:</label>
+                  <input type="text" th:field="${order.postCode}" placeholder="Kod pocztowy...">
+                </li>
+                <li class="single_field zip-field">
+                  <label>Poczta:</label>
+                  <input type="text" th:field="${order.post}" placeholder="Poczta...">
+                </li>
+              </ul>
+              <button class="btn btn-default check_out" type="submit">Kup</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-6">
+          <div class="total_area">
+            <ul>
+              <li>Razem: <span th:text="${order.total} + ' PLN'"> ... </span></li>
+            </ul>
+          </div>
+        </div>
+        <h3 th:text="${comment}">...</h3>
+      </div>
+    </div>
+  </section>
+  <!--/#do_action-->

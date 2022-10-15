@@ -9,6 +9,7 @@ import com.lagu.eshop.module.product.entity.CategoryEntity;
 import com.lagu.eshop.module.product.dto.PageSetup;
 import com.lagu.eshop.module.product.service.CategoryService;
 import com.lagu.eshop.module.product.service.ProductService;
+import com.lagu.eshop.module.user.service.UserService;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,7 +28,7 @@ import java.util.Map;
 /**
  * Product web controller
  * @author Tomasz Łagowski
- * @version 1.3
+ * @version 1.4
  */
 @Controller
 public class ProductWebController {
@@ -36,7 +37,9 @@ public class ProductWebController {
 
     private final ProductService service;
     private final HttpSession httpSession;
+    private final CartWebController cartWebController;
     private final CategoryService categoryService;
+    private final UserService userService;
     private final ObjectMapper objectMapper;
 
     String uri = "/shop";
@@ -45,12 +48,16 @@ public class ProductWebController {
     public ProductWebController(
             ProductService service,
             HttpSession httpSession,
+            CartWebController cartWebController,
             CategoryService categoryService,
+            UserService userService,
             ObjectMapper objectMapper
     ) {
         this.service = service;
         this.httpSession = httpSession;
+        this.cartWebController = cartWebController;
         this.categoryService = categoryService;
+        this.userService = userService;
         this.objectMapper = objectMapper;
     }
 
@@ -132,7 +139,9 @@ public class ProductWebController {
 
         PageWrapper pageWrapper = new PageWrapper(allPerPage.getMetadata(), uri, params);
         List<ProductDto> products = allPerPage.getContent();
-
+        if (isLogged) {
+            products = cartWebController.setProductAsAdded(products, authentication);
+        }
         List<CategoryEntity> categories = categoryService.getMainCategoryWithSubcategories();
         model.addAttribute("products", products);
         model.addAttribute("pages", pageWrapper.getPageWrapper());
@@ -211,7 +220,7 @@ public class ProductWebController {
      * @param authentication Security information
      */
     private void setCommonModelSettings(Model model, Authentication authentication) {
-        ControllerTools.setCommonModelSettings(model, authentication, httpSession,
+        ControllerTools.setCommonModelSettings(model, authentication, httpSession, userService,
                 objectMapper, isLogged, uri);
     }
 

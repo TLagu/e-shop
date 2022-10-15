@@ -9,11 +9,12 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Product repository
  * @author Tomasz Łagowski
- * @version 1.1
+ * @version 1.2
  */
 public interface ProductRepository extends JpaRepository<ProductEntity, Long>, JpaSpecificationExecutor<ProductEntity> {
 
@@ -54,5 +55,13 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long>, J
      * @return Product
      */
     ProductEntity getByUuid(String uuid);
+
+    /**
+     * Find product entity by UUID
+     * @since 1.2
+     * @param uuid Product UUID
+     * @return Product entity
+     */
+    Optional<ProductEntity> findByUuid(String uuid);
 
 }

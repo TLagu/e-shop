@@ -35,46 +35,6 @@
 											</span>
                 						</div>
             						</div>
-            						<div th:if="${pageSetup.isLogged}" class="choose">
-                						<ul class="nav nav-pills nav-justified">
-                    						<li>
-												<a
-														th:if="${product.wishlist == false}"
-														th:href="@{/wishlist/add/} + ${product.uuid}"
-												>
-													<i class="fa fa-plus-square"></i>
-													Dodaj do obserwowanych
-												</a>
-											</li>
-											<li>
-												<a
-														th:if="${product.wishlist}"
-														th:href="@{/wishlist/remove/} + ${product.uuid}"
-												>
-													<i class="fa fa-plus-square"></i>
-													Usuń z obserwowanych
-												</a>
-											</li>
-											<li>
-												<a
-														th:if="${product.compare == false}"
-														th:href="@{/compare/add/} + ${product.uuid}"
-												>
-													<i class="fa fa-plus-square"></i>
-													Dodaj do porównania
-												</a>
-											</li>
-                    						<li>
-												<a
-														th:if="${product.compare}"
-														th:href="@{/compare/remove/} + ${product.uuid}"
-												>
-													<i class="fa fa-plus-square"></i>
-													Usuń z porównania
-												</a>
-											</li>
-                						</ul>
-            						</div>
         						</div>
     						</div>
 						</div>
