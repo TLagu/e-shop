@@ -43,6 +43,7 @@ public class CategoryFormMapper {
      */
     public static CategoryForm map(CategoryEntity entity) {
         CategoryForm form = new CategoryForm()
+                .setId(entity.getId())
                 .setName(entity.getName())
                 .setDescription(entity.getDescription())
                 .setParent((entity.getParent() == null) ? null : entity.getParent().getId());

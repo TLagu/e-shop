@@ -33,7 +33,11 @@ public class TemplateService {
         CategoryEntity category = categoryRepository.findById(cid)
                 .orElseThrow(() -> new IllegalArgumentException("Nie znaleziono kategorii!!!"));
         TemplateEntity template = templateRepository.findByIdAndCategory(tid, category);
-        templateRepository.delete(template);
+        if (template != null) {
+            templateRepository.deleteById(tid);
+        }
+//        templateRepository.delete(template);
+//        templateRepository.flush();
     }
 
     /**

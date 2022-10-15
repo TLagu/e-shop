@@ -19,3 +19,4 @@ Commits:
 9. Stage 6: User account page
 10. Stage 7: Cart and order functionality
 11. Stage 8: Product pages (admin)
+12. Stage 9: Dictionary pages (admin)

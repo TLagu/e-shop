@@ -47,7 +47,7 @@ public class TemplateEntity implements Serializable {
     @Enumerated(EnumType.STRING)
     private Status status = Status.ACTIVE;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", referencedColumnName = "id", nullable = false)
     private CategoryEntity category;
 

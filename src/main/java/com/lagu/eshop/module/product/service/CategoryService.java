@@ -2,6 +2,7 @@ package com.lagu.eshop.module.product.service;
 
 import com.lagu.eshop.module.product.dto.CategoryForm;
 import com.lagu.eshop.module.product.entity.CategoryEntity;
+import com.lagu.eshop.module.product.entity.TemplateEntity;
 import com.lagu.eshop.module.product.mapper.CategoryMapper;
 import com.lagu.eshop.module.product.repository.CategoryRepository;
 import com.lagu.eshop.module.product.dto.CategoryDto;
@@ -9,14 +10,16 @@ import com.lagu.eshop.module.product.mapper.CategoryFormMapper;
 import com.lagu.eshop.module.product.repository.TemplateRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
  * Category service
  * @author Tomasz Łagowski
- * @version 1.0
+ * @version 1.1
  */
 @Service
 public class CategoryService {
@@ -89,6 +92,62 @@ public class CategoryService {
     public List<CategoryDto> getByParentIsNullAndIdNot(Long id) {
         List<CategoryEntity> categories = categoryRepository.findByParentIsNullAndIdIsNotOrderByName(id);
         return categories.stream().map(c -> CategoryMapper.map(c, null)).collect(Collectors.toList());
+    }
+
+    public CategoryEntity createOrUpdate(CategoryForm category) {
+        if (category.isNew()) {
+            return create(category);
+        }
+        return update(category.getId(), category);
+    }
+
+    /**
+     * @since 1.1
+     * @param categoryForm Category form
+     * @return Category entity
+     */
+    public CategoryEntity create(CategoryForm categoryForm) {
+        Optional<CategoryEntity> parent = categoryRepository.findById(categoryForm.getParent());
+        Set<TemplateEntity> templates = new HashSet<>();
+        CategoryEntity categoryEntity = CategoryFormMapper.map(categoryForm, parent.orElse(null), templates);
+        return categoryRepository.saveAndFlush(categoryEntity);
+    }
+
+    /**
+     * Update category
+     * @since 1.1
+     * @param id Parent category ID
+     * @param categoryForm Category form
+     * @return Category entity
+     */
+    public CategoryEntity update(Long id, CategoryForm categoryForm) {
+        CategoryEntity parent = categoryRepository.findById(categoryForm.getParent()).orElse(null);
+        Set<TemplateEntity> templates = null;
+        if (categoryForm.getTemplates() != null) {
+            templates = categoryForm.getTemplates().stream()
+                    .map(c -> templateRepository.findById(c.getId())
+                            .orElseThrow(() -> new IllegalArgumentException("Nie znaleziono parametru do aktualizacji!!!"))
+                            .setName(c.getName())
+                    )
+                    .collect(Collectors.toSet());
+        }
+        CategoryEntity category = categoryRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Nie znaleziono kategorii do aktualizacji!!!"))
+                .setName(categoryForm.getName())
+                .setDescription(categoryForm.getDescription())
+                .setParent(parent)
+                .setTemplates(templates);
+        return categoryRepository.saveAndFlush(category);
+    }
+
+    /**
+     * Delete category
+     * @since 1.1
+     * @param id Category ID
+     */
+    public void delete(Long id) {
+        CategoryEntity entity = categoryRepository.getById(id);
+        categoryRepository.delete(entity);
     }
 
 }

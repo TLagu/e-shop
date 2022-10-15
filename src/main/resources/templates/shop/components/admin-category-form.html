@@ -1,0 +1,50 @@
+<div class="table-responsive cart_info" th:fragment="fragment">
+    <form th:action="@{/admin/category}" th:object="${categoryForm}" method="post">
+        <div class="chose_area">
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Nazwa kategorii:</label>
+                    <input type="text" th:field="*{name}" placeholder="Nazwa kategorii...">
+                    <div class="alert alert-warning" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Opis kategorii:</label>
+                    <input type="text" th:field="*{description}" placeholder="Opis kategorii...">
+                    <div class="alert alert-warning" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div>
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <label>Kategoria nadrzędna:</label>
+                    <select id="parent" name="parent">
+                        <option value="0">Brak kategorii</option>
+                        <option
+                                th:each="category : ${categories}"
+                                th:value="${category.id}"
+                                th:text="${category.name}"
+                                th:selected="${categoryForm?.parent} == ${category.id}"
+                        ></option>
+                    </select>
+                </li>
+            </ul>
+            <ul class="user_info" th:each="template, i : *{templates}">
+                <li class="single_field">
+                    <label><span th:text="'Parametr: ' + ${i.index}"> ... </span>:</label>
+                    <input type="hidden" name="id" th:field="*{templates[__${i.index}__].id}">
+                    <input type="text" name="name" th:field="*{templates[__${i.index}__].name}">
+                    <a th:href="'/admin/category/' + ${categoryForm.id} + '/template/' + ${template.id} + '/delete'"><i class="fa fa-times fa-delete fa-action">&nbsp;</i></a>
+                </li>
+            </ul>
+            <ul class="user_info">
+                <li class="single_field">
+                    <a th:href="'/admin/category/' + ${categoryForm.id} + '/template/add'"><i class="fa fa-plus fa-action">Dodaj parametr</i></a>
+                </li>
+            </ul>
+            <button class="btn btn-default check_out" type="submit">Zapisz</button>
+            <a class="btn btn-default check_out"  href="/admin/category">Cancel</a>
+            <input type="hidden" name="id" th:value="*{id}">
+        </div>
+    </form>
+</div>
