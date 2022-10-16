@@ -1,7 +1,6 @@
 package com.lagu.eshop.module.product.dto;
 
 import com.lagu.eshop.module.user.entity.UserEntity;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -14,7 +13,6 @@ import java.util.Set;
  * @version 1.0
  */
 @Getter
-@EqualsAndHashCode
 public class OrderDto {
 
     private LocalDateTime createdOn;

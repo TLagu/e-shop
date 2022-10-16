@@ -1,6 +1,5 @@
 package com.lagu.eshop.module.product.dto;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import javax.validation.constraints.Size;
@@ -12,7 +11,6 @@ import javax.validation.constraints.Size;
  * @version 1.0
  */
 @Getter
-@EqualsAndHashCode
 public class AttributeForm {
 
     private Long id;

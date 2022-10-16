@@ -1,6 +1,5 @@
 package com.lagu.eshop.module.product.dto;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 /**
@@ -10,7 +9,6 @@ import lombok.Getter;
  * @version 1.0
  */
 @Getter
-@EqualsAndHashCode
 public class OrderDetailsDto {
 
     private OrderDto order;

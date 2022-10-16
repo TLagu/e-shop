@@ -1,6 +1,5 @@
 package com.lagu.eshop.module.product.dto;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.util.Set;
@@ -12,7 +11,6 @@ import java.util.Set;
  * @version 1.0
  */
 @Getter
-@EqualsAndHashCode
 public class ProductDto {
 
     private String uuid;

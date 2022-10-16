@@ -1,6 +1,5 @@
 package com.lagu.eshop.module.product.dto;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import javax.validation.constraints.DecimalMax;
@@ -16,7 +15,6 @@ import java.util.List;
  * @version 1.0
  */
 @Getter
-@EqualsAndHashCode
 public class ProductForm implements Serializable {
 
     private String uuid;

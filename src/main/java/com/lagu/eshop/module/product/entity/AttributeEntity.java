@@ -1,6 +1,5 @@
 package com.lagu.eshop.module.product.entity;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
@@ -22,7 +21,6 @@ import java.time.LocalDateTime;
 @SQLDelete(sql = "UPDATE attribute SET status = 'DELETED' WHERE id = ?")
 @Where(clause = "status = 'ACTIVE'")
 @Getter
-@EqualsAndHashCode
 public class AttributeEntity implements Serializable {
 
     @Id

@@ -1,7 +1,6 @@
 package com.lagu.eshop.module.product.entity;
 
 import com.lagu.eshop.module.user.entity.UserEntity;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -18,7 +17,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "cart")
 @Getter
-@EqualsAndHashCode
 public class CartEntity implements Serializable {
 
     @Id

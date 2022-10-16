@@ -1,7 +1,6 @@
 package com.lagu.eshop.module.product.dto;
 
 import com.lagu.eshop.module.user.dto.UserDto;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 /**
@@ -11,7 +10,6 @@ import lombok.Getter;
  * @version 1.0
  */
 @Getter
-@EqualsAndHashCode
 public class CartDto {
 
     private UserDto user;

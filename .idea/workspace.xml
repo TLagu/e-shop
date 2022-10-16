@@ -14,18 +14,19 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CategoryForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CategoryForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDetailsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDetailsDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/PageSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/PageSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/TemplateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/TemplateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/TemplateForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/TemplateForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/AttributeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/AttributeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/CartEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/CartEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/CategoryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/OrderDetailsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/OrderDetailsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/OrderEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/ProductEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/user/dto/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/user/dto/UserForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/EShopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/EShopApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/CategoryFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/CategoryFormTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/ProductFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/ProductFormTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/TemplateFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/TemplateFormTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/service/CartServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/service/CartServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/TemplateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/TemplateEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shop/components/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shop/product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/product-details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +203,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665688602108</updated>
-      <workItem from="1665688604702" duration="132150000" />
+      <workItem from="1665688604702" duration="134909000" />
     </task>
     <servers />
   </component>

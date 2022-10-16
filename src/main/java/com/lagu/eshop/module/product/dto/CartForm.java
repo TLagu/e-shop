@@ -1,7 +1,6 @@
 package com.lagu.eshop.module.product.dto;
 
 import com.lagu.eshop.module.user.dto.UserDto;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import javax.validation.constraints.*;
@@ -13,7 +12,6 @@ import javax.validation.constraints.*;
  * @version 1.0
  */
 @Getter
-@EqualsAndHashCode
 public class CartForm {
 
     private UserDto user;
