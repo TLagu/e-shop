@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 /**
  * Order mapper
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -17,10 +18,11 @@ public class OrderMapper {
 
     /**
      * Map order entity to order DTO
-     * @since 1.0
-     * @param entity Order entity
+     *
+     * @param entity  Order entity
      * @param details Order details DTO
      * @return Order DTO
+     * @since 1.0
      */
     public static OrderDto map(OrderEntity entity, OrderDetailsDto details) {
         OrderDto order = new OrderDto()
@@ -45,9 +47,10 @@ public class OrderMapper {
 
     /**
      * Map list of order entities to list of order DTOs
-     * @since 1.0
+     *
      * @param entities List of order entities
      * @return List of order DTOs
+     * @since 1.0
      */
     public static List<OrderDto> map(List<OrderEntity> entities) {
         return entities.stream()

@@ -1,5 +1,6 @@
 package com.lagu.eshop.module.product.entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 /**
  * List of additional product attributes specific to a specific product category added when creating a product object
  * Different product category can have
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -21,6 +23,7 @@ import java.time.LocalDateTime;
 @SQLDelete(sql = "UPDATE category_attribute SET status = 'DELETED' WHERE id = ?")
 @Where(clause = "status = 'ACTIVE'")
 @Getter
+@EqualsAndHashCode
 public class TemplateEntity implements Serializable {
 
     @Id

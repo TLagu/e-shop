@@ -1,13 +1,16 @@
 package com.lagu.eshop.module.product.dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 /**
  * Order details DTO
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Getter
+@EqualsAndHashCode
 public class OrderDetailsDto {
 
     private OrderDto order;

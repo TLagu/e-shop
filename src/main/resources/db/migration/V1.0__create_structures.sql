@@ -1,80 +1,80 @@
 CREATE TABLE IF NOT EXISTS attribute (
-    id ${type_serial} PRIMARY KEY,
-    created_on timestamp ${timestamp},
+    id BIGSERIAL PRIMARY KEY,
+    created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     created_by bigint,
-    updated_on timestamp ${timestamp},
+    updated_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_by bigint,
-    status ${varchar}(25),
+    status CHARACTER VARYING(25),
     product_id bigint,
-    name ${varchar}(200),
-    description ${text}
+    name CHARACTER VARYING(200),
+    description TEXT
 );
 
 CREATE TABLE IF NOT EXISTS product (
-    id ${type_serial} PRIMARY KEY,
-    created_on timestamp ${timestamp},
+    id BIGSERIAL PRIMARY KEY,
+    created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     created_by bigint,
-    updated_on timestamp ${timestamp},
+    updated_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_by bigint,
-    status ${varchar}(25),
-    uuid ${varchar}(36),
-    model ${varchar}(200),
-    description ${text},
+    status CHARACTER VARYING(25),
+    uuid CHARACTER VARYING(36),
+    model CHARACTER VARYING(200),
+    description TEXT,
     category_id bigint,
-    price ${numeric}(10, 2),
-    path ${varchar}(200),
-    code ${varchar}(50)
+    price NUMERIC(10, 2),
+    path CHARACTER VARYING(200),
+    code CHARACTER VARYING(50)
 );
 
 CREATE TABLE IF NOT EXISTS category_attribute (
-    id ${type_serial} PRIMARY KEY,
-    created_on timestamp ${timestamp},
+    id BIGSERIAL PRIMARY KEY,
+    created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     created_by int,
-    updated_on timestamp ${timestamp},
+    updated_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_by int,
-    status ${varchar}(25),
+    status CHARACTER VARYING(25),
     category_id bigint,
-    name ${varchar}(200)
+    name CHARACTER VARYING(200)
 );
 
 CREATE TABLE IF NOT EXISTS category (
-    id ${type_serial} PRIMARY KEY,
-    created_on timestamp ${timestamp},
+    id BIGSERIAL PRIMARY KEY,
+    created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     created_by int,
-    updated_on timestamp ${timestamp},
+    updated_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_by int,
-    status ${varchar}(25),
-    name ${varchar}(200),
-    description ${text},
+    status CHARACTER VARYING(25),
+    name CHARACTER VARYING(200),
+    description TEXT,
     parent_id bigint
 );
 
 CREATE TABLE IF NOT EXISTS cart (
-    id ${type_serial} PRIMARY KEY,
-    created_on timestamp ${timestamp},
+    id BIGSERIAL PRIMARY KEY,
+    created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     user_id bigint,
     product_id bigint,
     amount integer default 1,
-    total ${numeric}(10, 2)
+    total NUMERIC(10, 2)
 );
 
 CREATE TABLE IF NOT EXISTS order_main (
-    id ${type_serial} PRIMARY KEY,
-    created_on timestamp ${timestamp},
-    uuid ${varchar}(36),
+    id BIGSERIAL PRIMARY KEY,
+    created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    uuid CHARACTER VARYING(36),
     user_id bigint,
-    street ${varchar}(100),
-    post_code ${varchar}(6),
-    post ${varchar}(50),
-    total ${numeric}(10, 2)
+    street CHARACTER VARYING(100),
+    post_code CHARACTER VARYING(6),
+    post CHARACTER VARYING(50),
+    total NUMERIC(10, 2)
 );
 
 CREATE TABLE IF NOT EXISTS order_details (
-    id ${type_serial} PRIMARY KEY,
-    created_on timestamp ${timestamp},
+    id BIGSERIAL PRIMARY KEY,
+    created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     order_id bigint,
     product_id bigint,
-    price ${numeric}(10, 2),
+    price NUMERIC(10, 2),
     amount integer,
-    total ${numeric}(10, 2)
+    total NUMERIC(10, 2)
 );

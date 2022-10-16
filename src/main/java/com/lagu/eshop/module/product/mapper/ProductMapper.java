@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 /**
  * Product mapper (DTO)
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */

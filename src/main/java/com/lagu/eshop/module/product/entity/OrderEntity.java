@@ -1,6 +1,7 @@
 package com.lagu.eshop.module.product.entity;
 
 import com.lagu.eshop.module.user.entity.UserEntity;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -11,12 +12,14 @@ import java.util.Set;
 
 /**
  * Order entity
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Entity
 @Table(name = "order_main")
 @Getter
+@EqualsAndHashCode
 public class OrderEntity implements Serializable {
 
     @Id
@@ -94,4 +97,5 @@ public class OrderEntity implements Serializable {
         this.orderDetails = orderDetails;
         return this;
     }
+
 }

@@ -15,6 +15,7 @@ import javax.validation.Valid;
 
 /**
  * Category web controller (admin)
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -31,10 +32,11 @@ public class AdminCategoryWebController {
 
     /**
      * List of categories
-     * @since 1.0
-     * @param model Model attributes
+     *
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/admin/category"})
     public String list(Model model, HttpServletRequest request) {
@@ -45,11 +47,12 @@ public class AdminCategoryWebController {
 
     /**
      * Category details
-     * @since 1.0
-     * @param cid Category id
-     * @param model Model attributes
+     *
+     * @param cid     Category id
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping(value = "/admin/category/{id}")
     public String details(@PathVariable("id") Long cid, Model model, HttpServletRequest request) {
@@ -60,10 +63,11 @@ public class AdminCategoryWebController {
 
     /**
      * Category form
-     * @since 1.0
-     * @param model Model attributes
+     *
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping(value = "/admin/category-form")
     public String form(Model model, HttpServletRequest request) {
@@ -75,11 +79,12 @@ public class AdminCategoryWebController {
 
     /**
      * Edit category
-     * @since 1.0
-     * @param cid Category id
-     * @param model Model attributes
+     *
+     * @param cid     Category id
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping(value = "/admin/category/{id}/edit")
     public String edit(@PathVariable("id") Long cid, Model model, HttpServletRequest request) {
@@ -91,12 +96,13 @@ public class AdminCategoryWebController {
 
     /**
      * Creat or update category
-     * @since 1.0
+     *
      * @param categoryForm Category form
-     * @param result Binding result
-     * @param model Model attributes
-     * @param request HTTP servlet request
+     * @param result       Binding result
+     * @param model        Model attributes
+     * @param request      HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @PostMapping("/admin/category")
     public String createOrUpdate(@Valid @ModelAttribute("categoryForm") CategoryForm categoryForm,
@@ -112,9 +118,10 @@ public class AdminCategoryWebController {
 
     /**
      * Delete category (GET)
-     * @since 1.0
+     *
      * @param cid Category ID
      * @return page
+     * @since 1.0
      */
     @GetMapping(value = "/admin/category/{id}/delete")
     public String deleteGet(@PathVariable("id") Long cid) {
@@ -124,9 +131,10 @@ public class AdminCategoryWebController {
 
     /**
      * Delete category (POST)
-     * @since 1.0
+     *
      * @param cid Category ID
      * @return page
+     * @since 1.0
      */
     @DeleteMapping(value = "/admin/category/{id}/delete")
     public String deletePost(@PathVariable("id") Long cid) {
@@ -136,11 +144,12 @@ public class AdminCategoryWebController {
 
     /**
      * Add template
-     * @since 1.0
-     * @param cid Category ID
-     * @param model Model attributes
+     *
+     * @param cid     Category ID
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping(value = "/admin/category/{id}/template/add")
     public String addTemplate(@PathVariable("id") Long cid, Model model, HttpServletRequest request) {
@@ -153,10 +162,11 @@ public class AdminCategoryWebController {
 
     /**
      * Delete template (GET)
-     * @since 1.0
+     *
      * @param cid Category ID
      * @param tid Template ID
      * @return page
+     * @since 1.0
      */
     @GetMapping(value = "/admin/category/{cid}/template/{tid}/delete")
     public String deleteTemplateGet(@PathVariable Long cid, @PathVariable Long tid) {
@@ -166,10 +176,11 @@ public class AdminCategoryWebController {
 
     /**
      * Delete template (POST)
-     * @since 1.0
+     *
      * @param cid Category ID
      * @param tid Template ID
      * @return page
+     * @since 1.0
      */
     @PostMapping(value = "/admin/category/{cid}/template/{tid}/delete")
     public String deleteTemplatePost(@PathVariable Long cid, @PathVariable Long tid) {
@@ -179,9 +190,10 @@ public class AdminCategoryWebController {
 
     /**
      * Set common attributes
-     * @since 1.0
+     *
      * @param request HTTP servlet request
-     * @param model Model attributes
+     * @param model   Model attributes
+     * @since 1.0
      */
     private void setCommonAttributes(HttpServletRequest request, Model model) {
         String uri = request.getRequestURI();

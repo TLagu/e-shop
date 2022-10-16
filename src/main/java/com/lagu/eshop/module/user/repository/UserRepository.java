@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 /**
  * User repository
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -14,18 +15,20 @@ public interface UserRepository extends JpaRepository<UserEntity, Long>, JpaSpec
 
     /**
      * Getting user by email
-     * @since 1.0
+     *
      * @param email e-mail string
      * @return User entity
+     * @since 1.0
      */
     @Query("SELECT u FROM UserEntity u WHERE u.email = ?1")
     UserEntity findByEmail(String email);
 
     /**
      * Getting user by UUID
-     * @since 1.0
+     *
      * @param uuid UUID string
      * @return User entity
+     * @since 1.0
      */
     UserEntity getByUuid(String uuid);
 

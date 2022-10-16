@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * Template service
+ *
  * @author Tomasz Łagowski
  * @version 1.1
  */
@@ -25,9 +26,10 @@ public class TemplateService {
 
     /**
      * Delete template
-     * @since 1.1
+     *
      * @param cid Category ID
      * @param tid Template ID
+     * @since 1.1
      */
     public void delete(Long cid, Long tid) {
         CategoryEntity category = categoryRepository.findById(cid)
@@ -42,8 +44,9 @@ public class TemplateService {
 
     /**
      * Add template
-     * @since 1.1
+     *
      * @param cid Category ID
+     * @since 1.1
      */
     public void addTemplate(Long cid) {
         CategoryEntity category = categoryRepository.findById(cid)

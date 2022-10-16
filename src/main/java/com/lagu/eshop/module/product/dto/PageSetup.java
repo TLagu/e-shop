@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
+ * Page setup
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */

@@ -22,6 +22,7 @@ import java.util.List;
 
 /**
  * Admin product controller
+ *
  * @author Tomasz Łagowski
  * @version 1.1
  */
@@ -41,12 +42,13 @@ public class AdminProductWebController {
 
     /**
      * Admin/product list page
-     * @since 1.0
-     * @param page Page number
-     * @param size Number of products on the page
-     * @param model Model attributes
+     *
+     * @param page    Page number
+     * @param size    Number of products on the page
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/admin", "/admin/product"})
     public String list(
@@ -66,11 +68,12 @@ public class AdminProductWebController {
 
     /**
      * Show product details
-     * @since 1.1
-     * @param uuid Product UUID
-     * @param model Model attributes
+     *
+     * @param uuid    Product UUID
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.1
      */
     @GetMapping("/admin/product/{uuid}")
     public String details(@PathVariable("uuid") String uuid, Model model, HttpServletRequest request) {
@@ -81,10 +84,11 @@ public class AdminProductWebController {
 
     /**
      * Product form
-     * @since 1.1
-     * @param model Model attributes
+     *
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.1
      */
     @GetMapping("/admin/product-form")
     public String form(Model model, HttpServletRequest request) {
@@ -96,11 +100,12 @@ public class AdminProductWebController {
 
     /**
      * Edit product
-     * @since 1.1
-     * @param uuid Product UUID
-     * @param model Model attributes
+     *
+     * @param uuid    Product UUID
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.1
      */
     @GetMapping("/admin/product/{uuid}/edit")
     public String edit(@PathVariable("uuid") String uuid, Model model, HttpServletRequest request) {
@@ -112,14 +117,15 @@ public class AdminProductWebController {
 
     /**
      * Create or update product
-     * @since 1.1
-     * @param productForm Product form
-     * @param result Binding result
-     * @param model Model attributes
-     * @param request HTTP servlet request
+     *
+     * @param productForm   Product form
+     * @param result        Binding result
+     * @param model         Model attributes
+     * @param request       HTTP servlet request
      * @param multipartFile Multipart file
      * @return page
      * @throws IOException
+     * @since 1.1
      */
     @PostMapping("/admin/product")
     public String createOrUpdate(@Valid @ModelAttribute("productForm") ProductForm productForm,
@@ -137,9 +143,10 @@ public class AdminProductWebController {
 
     /**
      * Delete by get method
-     * @since 1.1
+     *
      * @param uuid Product UUID
      * @return page
+     * @since 1.1
      */
     @GetMapping("/admin/product/{uuid}/delete")
     public String deleteByGet(@PathVariable("uuid") String uuid) {
@@ -149,9 +156,10 @@ public class AdminProductWebController {
 
     /**
      * delete by post method
-     * @since 1.1
+     *
      * @param uuid Product UUID
      * @return page
+     * @since 1.1
      */
     @DeleteMapping("/shop/product/{uuid}/delete")
     public String deleteByPost(@PathVariable("uuid") String uuid) {
@@ -161,9 +169,10 @@ public class AdminProductWebController {
 
     /**
      * Common attributes
-     * @since 1.0
+     *
      * @param request Security HTTP servlet request
-     * @param model Model attributes
+     * @param model   Model attributes
+     * @since 1.0
      */
     private void setCommonAttributes(HttpServletRequest request, Model model) {
         String uri = request.getRequestURI();

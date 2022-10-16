@@ -1,6 +1,7 @@
 package com.lagu.eshop.module.product.entity;
 
 import com.lagu.eshop.module.user.entity.UserEntity;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -10,12 +11,14 @@ import java.time.LocalDateTime;
 
 /**
  * Cart
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Entity
 @Table(name = "cart")
 @Getter
+@EqualsAndHashCode
 public class CartEntity implements Serializable {
 
     @Id
@@ -69,6 +72,7 @@ public class CartEntity implements Serializable {
 
     /**
      * Add another product
+     *
      * @since 1.0
      */
     public void addAmount() {
@@ -78,6 +82,7 @@ public class CartEntity implements Serializable {
 
     /**
      * Remove one product
+     *
      * @since 1.0
      */
     public void removeAmount() {

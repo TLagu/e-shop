@@ -6,6 +6,7 @@ import com.lagu.eshop.module.user.mapper.UserMapper;
 
 /**
  * Cart form mapper
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -13,9 +14,10 @@ public class CartFormMapper {
 
     /**
      * Form entity -> form
-     * @since 1.0
+     *
      * @param entity Cart entity
      * @return Cart form
+     * @since 1.0
      */
     public static CartForm map(CartEntity entity) {
         return new CartForm()

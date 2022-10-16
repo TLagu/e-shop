@@ -1,14 +1,17 @@
 package com.lagu.eshop.module.product.dto;
 
 import com.lagu.eshop.module.product.entity.Status;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 /**
  * DTO for template
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Getter
+@EqualsAndHashCode
 public class TemplateDto {
     private Long id;
     private Status status;

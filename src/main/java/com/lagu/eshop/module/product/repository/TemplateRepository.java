@@ -10,6 +10,7 @@ import java.util.Set;
 
 /**
  * Template repository
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -17,18 +18,20 @@ public interface TemplateRepository extends JpaRepository<TemplateEntity, Long>,
 
     /**
      * Search by templates
-     * @since 1.0
+     *
      * @param ids Template ID list
      * @return List of templates
+     * @since 1.0
      */
     Set<TemplateEntity> findByIdIn(List<Long> ids);
 
     /**
      * Search by ID and category
-     * @since 1.0
-     * @param id Template ID
+     *
+     * @param id       Template ID
      * @param category Category
      * @return List of templates
+     * @since 1.0
      */
     TemplateEntity findByIdAndCategory(Long id, CategoryEntity category);
 

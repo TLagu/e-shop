@@ -7,6 +7,7 @@ import lombok.Getter;
 
 /**
  * DTO for main user data
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */

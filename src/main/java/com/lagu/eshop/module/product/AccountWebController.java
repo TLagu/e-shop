@@ -19,6 +19,7 @@ import javax.validation.Valid;
 
 /**
  * Account web controller
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -34,11 +35,12 @@ public class AccountWebController {
 
     /**
      * Account page
-     * @since 1.0
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @GetMapping(value = "/account")
     public String form(Model model, HttpServletRequest request, Authentication authentication) {
@@ -49,13 +51,14 @@ public class AccountWebController {
 
     /**
      * Update account page
-     * @since 1.0
-     * @param userForm User form
-     * @param result Binding result
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param userForm       User form
+     * @param result         Binding result
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @PostMapping(value = "/account")
     public String update(@Valid @ModelAttribute("userForm") UserForm userForm, BindingResult result, Model model,
@@ -72,9 +75,10 @@ public class AccountWebController {
 
     /**
      * Menu generator
-     * @since 1.0
-     * @param model Model attributes
+     *
+     * @param model   Model attributes
      * @param request HTTP Servlet Request
+     * @since 1.0
      */
     private void generateMenu(
             Model model,

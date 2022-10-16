@@ -4,6 +4,7 @@ import lombok.Getter;
 
 /**
  * Product status
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */

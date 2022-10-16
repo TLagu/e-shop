@@ -27,6 +27,7 @@ import java.util.stream.Collectors;
 
 /**
  * Product service
+ *
  * @author Tomasz Łagowski
  * @version 1.3
  */
@@ -46,8 +47,9 @@ public class ProductService {
 
     /**
      * Getting random products to the slider
-     * @since 1.0
+     *
      * @return List of products
+     * @since 1.0
      */
     public List<ProductDto> getRandomForSlider() {
         return productRepository.findRandomForHeader(PageRequest.of(0, 3)).stream()
@@ -57,9 +59,10 @@ public class ProductService {
 
     /**
      * Search for products
-     * @since 1.0
+     *
      * @param search Search string
      * @return List of products
+     * @since 1.0
      */
     public List<ProductDto> searchProducts(String search) {
         List<ProductEntity> products = productRepository.searchProduct(search);
@@ -70,11 +73,12 @@ public class ProductService {
 
     /**
      * Getting products by category
-     * @since 1.1
+     *
      * @param category Category
-     * @param page Page number
-     * @param size Number of products on the page
+     * @param page     Page number
+     * @param size     Number of products on the page
      * @return List of products
+     * @since 1.1
      */
     public ListResponse<ProductDto> getByCategories(long category, int page, int size) {
         List<CategoryEntity> categories = categoryRepository.findAncestry(category);
@@ -90,10 +94,11 @@ public class ProductService {
 
     /**
      * Getting products from page number
-     * @since 1.1
+     *
      * @param page Page number
      * @param size Number of products on the page
      * @return List of products
+     * @since 1.1
      */
     public ListResponse<ProductDto> getAllPerPage(int page, int size) {
         Page<ProductEntity> pageProduct = productRepository.findAll(PageRequest.of(page, size));
@@ -108,9 +113,10 @@ public class ProductService {
 
     /**
      * Getting product by UUID
-     * @since 1.1
+     *
      * @param uuid Product UUID
      * @return Product
+     * @since 1.1
      */
     public ProductDto getDtoByUuid(String uuid) {
         return ProductMapper.map(productRepository.getByUuid(uuid), null);
@@ -118,8 +124,9 @@ public class ProductService {
 
     /**
      * Get all
-     * @since 1.2
+     *
      * @return List of products
+     * @since 1.2
      */
     public List<ProductDto> getAll() {
         return productRepository.findAll().stream()
@@ -129,11 +136,12 @@ public class ProductService {
 
     /**
      * Create or update product
-     * @since 1.3
-     * @param product Product form
+     *
+     * @param product       Product form
      * @param multipartFile Graphic file
      * @return Product entity
      * @throws IOException
+     * @since 1.3
      */
     public ProductEntity createOrUpdate(ProductForm product, MultipartFile multipartFile) throws IOException {
         ProductEntity productEntity = (product.isNew()) ? create(product) : update(product);
@@ -149,9 +157,10 @@ public class ProductService {
 
     /**
      * Create product
-     * @since 1.3
+     *
      * @param productForm Product form
      * @return Product entity
+     * @since 1.3
      */
     public ProductEntity create(ProductForm productForm) {
         Set<AttributeEntity> attributes = new HashSet<>();
@@ -185,9 +194,10 @@ public class ProductService {
 
     /**
      * Update product
-     * @since 1.3
+     *
      * @param productForm Product form
      * @return Product entity
+     * @since 1.3
      */
     public ProductEntity update(ProductForm productForm) {
         CategoryEntity category = categoryRepository.findById(productForm.getCategory())
@@ -227,8 +237,9 @@ public class ProductService {
 
     /**
      * Delete product
-     * @since 1.3
+     *
      * @param uuid Product UUID
+     * @since 1.3
      */
     public void delete(String uuid) {
         ProductEntity entity = productRepository.getByUuid(uuid);
@@ -236,9 +247,9 @@ public class ProductService {
     }
 
     /**
-     * @since 1.3
      * @param uuid Product UUID
      * @return Product form
+     * @since 1.3
      */
     public ProductForm getFormByUuid(String uuid) {
         return ProductFormMapper.map(productRepository.getByUuid(uuid));

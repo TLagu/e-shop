@@ -1,15 +1,18 @@
 package com.lagu.eshop.module.product.dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.util.Set;
 
 /**
  * DTO for product categories
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Getter
+@EqualsAndHashCode
 public class CategoryDto {
     private Long id;
     private String name;
@@ -44,10 +47,12 @@ public class CategoryDto {
 
     /**
      * Object status verification (new/existing)
-     * @since 1.0
+     *
      * @return Status whether the object is new or existing
+     * @since 1.0
      */
     public boolean isNew() {
         return id == null || id == 0;
     }
+
 }

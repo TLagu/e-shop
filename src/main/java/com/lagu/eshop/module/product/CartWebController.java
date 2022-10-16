@@ -21,6 +21,7 @@ import java.util.List;
 
 /**
  * Cart web controller
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -39,10 +40,11 @@ public class CartWebController {
 
     /**
      * Add product to cart
-     * @since 1.0
-     * @param uuid Cart UUIDs
+     *
+     * @param uuid           Cart UUIDs
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/cart/add/{uuid}"})
     public ModelAndView add(
@@ -54,10 +56,11 @@ public class CartWebController {
 
     /**
      * Remove product from cart
-     * @since 1.0
-     * @param uuid Cart UUIDs
+     *
+     * @param uuid           Cart UUIDs
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/cart/remove/{uuid}"})
     public ModelAndView remove(
@@ -69,11 +72,12 @@ public class CartWebController {
 
     /**
      * Cart list
-     * @since 1.0
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/cart"})
     public String list(
@@ -86,12 +90,13 @@ public class CartWebController {
 
     /**
      * Remove cart item
-     * @since 1.0
-     * @param uuid Cart UUIDs
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param uuid           Cart UUIDs
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/cart/remove-item/{uuid}"})
     public String removeItem(
@@ -106,12 +111,13 @@ public class CartWebController {
 
     /**
      * Decrease the amount of products
-     * @since 1.0
-     * @param uuid Cart UUIDs
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param uuid           Cart UUIDs
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/cart/remove-amount/{uuid}"})
     public String removeAmount(
@@ -126,9 +132,10 @@ public class CartWebController {
 
     /**
      * Increase the amount of products
-     * @param uuid Cart UUIDs
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param uuid           Cart UUIDs
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
      * @return page
      */
@@ -145,12 +152,13 @@ public class CartWebController {
 
     /**
      * Order fulfillment
-     * @since 1.0
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
-     * @param order Order
+     * @param order          Order
      * @return page
+     * @since 1.0
      */
     @PostMapping({"/cart"})
     public String makeOrder(
@@ -169,10 +177,11 @@ public class CartWebController {
 
     /**
      * Set product as added
-     * @since 1.0
-     * @param products List of products
+     *
+     * @param products       List of products
      * @param authentication Authentication
      * @return List of products
+     * @since 1.0
      */
     public List<ProductDto> setProductAsAdded(List<ProductDto> products, Authentication authentication) {
         return ControllerTools.setProductAsAdded(products, authentication, service::getProductUuidListByUser, ProductDto::setCart);
@@ -180,11 +189,12 @@ public class CartWebController {
 
     /**
      * Show list of carts
-     * @since 1.0
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     private String showList(
             Model model,
@@ -192,7 +202,7 @@ public class CartWebController {
             Authentication authentication
     ) {
         String uri = request.getRequestURI();
-        List<CartForm> carts = service.getProductListByUser(authentication.getName());
+        List<CartForm> carts = service.getCartListByUser(authentication.getName());
         OrderDto order = orderService.getInitialOrder(authentication);
         model.addAttribute("bottomMenus", new MenuNavigator().getUserBottomMenu(uri, true));
         model.addAttribute("middleMenus", new MenuNavigator().getUserMiddleMenu(uri, true));

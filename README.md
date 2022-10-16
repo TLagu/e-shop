@@ -21,3 +21,5 @@ Commits:
 11. Stage 8: Product pages (admin)
 12. Stage 9: Dictionary pages (admin)
 13. Stage 10: User pages (admin)
+14. Stage 11: Test
+15. Clean code + tests

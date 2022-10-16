@@ -1,15 +1,18 @@
 package com.lagu.eshop.module.product.dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import javax.validation.constraints.Size;
 
 /**
  * Attribute form
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Getter
+@EqualsAndHashCode
 public class AttributeForm {
 
     private Long id;

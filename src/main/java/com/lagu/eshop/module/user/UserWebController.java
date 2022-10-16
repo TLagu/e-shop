@@ -18,6 +18,7 @@ import javax.validation.Valid;
 
 /**
  * User controller
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -34,9 +35,10 @@ public class UserWebController {
 
     /**
      * Login page
-     * @since 1.0
+     *
      * @param model Model attributes
      * @return page
+     * @since 1.0
      */
     @GetMapping("/login")
     public String viewHomePage(Model model) {
@@ -47,12 +49,13 @@ public class UserWebController {
 
     /**
      * Registering page
-     * @since 1.0
-     * @param userForm User form
-     * @param result Binding Result
-     * @param model Model attributes
+     *
+     * @param userForm       User form
+     * @param result         Binding Result
+     * @param model          Model attributes
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @PostMapping("/process-register")
     public String processRegister(

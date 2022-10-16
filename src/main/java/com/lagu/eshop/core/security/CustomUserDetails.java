@@ -11,10 +11,11 @@ import java.util.Collections;
 
 /**
  * User detail customization
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
- public class CustomUserDetails implements UserDetails {
+public class CustomUserDetails implements UserDetails {
 
     private final UserEntity userEntity;
 
@@ -59,8 +60,9 @@ import java.util.Collections;
 
     /**
      * Getting User name (firstname + lastname)
-     * @since 1.0
+     *
      * @return Full name
+     * @since 1.0
      */
     public String getFullName() {
         return userEntity.getFirstName() + " " + userEntity.getLastName();

@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 /**
  * Attribute repository
+ *
  * @author Tomasz Łagowski
  * @version 1.1
  */
@@ -14,8 +15,9 @@ public interface AttributeRepository extends JpaRepository<AttributeEntity, Long
 
     /**
      * Delete all attributes by product
-     * @since 1.1
+     *
      * @param product Product entity
+     * @since 1.1
      */
     void deleteAllByProduct(ProductEntity product);
 

@@ -11,6 +11,7 @@ import java.nio.file.StandardCopyOption;
 
 /**
  * File upload util
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -20,11 +21,12 @@ public class FileUploadUtil {
 
     /**
      * Save file
-     * @since 1.0
-     * @param uploadDir Upload directory
-     * @param fileName File name
+     *
+     * @param uploadDir     Upload directory
+     * @param fileName      File name
      * @param multipartFile MultipartFile
      * @throws IOException
+     * @since 1.0
      */
     public static void saveFile(String uploadDir, String fileName,
                                 MultipartFile multipartFile) throws IOException {

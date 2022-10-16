@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 
 /**
  * User web controller (admin)
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -41,12 +42,13 @@ public class AdminUserWebController {
 
     /**
      * List of users
-     * @since 1.0
-     * @param page Page number
-     * @param size Number of users on the site
-     * @param model Model attributes
+     *
+     * @param page    Page number
+     * @param size    Number of users on the site
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/admin/user"})
     public String list(
@@ -65,11 +67,12 @@ public class AdminUserWebController {
 
     /**
      * User details
-     * @since 1.0
-     * @param uuid User UUID
-     * @param model Model attributes
+     *
+     * @param uuid    User UUID
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping("/admin/user/{uuid}")
     public String details(@PathVariable("uuid") String uuid, Model model, HttpServletRequest request) {
@@ -80,10 +83,11 @@ public class AdminUserWebController {
 
     /**
      * User form
-     * @since 1.0
-     * @param model Model attributes
+     *
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping("/admin/user-form")
     public String form(Model model, HttpServletRequest request) {
@@ -95,11 +99,12 @@ public class AdminUserWebController {
 
     /**
      * Edit user
-     * @since 1.0
-     * @param uuid User UUID
-     * @param model Model attributes
+     *
+     * @param uuid    User UUID
+     * @param model   Model attributes
      * @param request HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @GetMapping("/admin/user/{uuid}/edit")
     public String edit(@PathVariable("uuid") String uuid, Model model, HttpServletRequest request) {
@@ -111,12 +116,13 @@ public class AdminUserWebController {
 
     /**
      * Create or update user
-     * @since 1.0
+     *
      * @param userForm User form
-     * @param result Binding result
-     * @param model Model attributes
-     * @param request HTTP servlet request
+     * @param result   Binding result
+     * @param model    Model attributes
+     * @param request  HTTP servlet request
      * @return page
+     * @since 1.0
      */
     @PostMapping("/admin/user")
     public String createOrUpdate(@Valid @ModelAttribute("userForm") UserForm userForm,
@@ -132,9 +138,10 @@ public class AdminUserWebController {
 
     /**
      * Delete user (GET)
-     * @since 1.0
+     *
      * @param uuid User UUID
      * @return page
+     * @since 1.0
      */
     @GetMapping("/admin/user/{uuid}/delete")
     public String deleteGet(@PathVariable String uuid) {
@@ -144,9 +151,10 @@ public class AdminUserWebController {
 
     /**
      * Delete user (POST)
-     * @since 1.0
+     *
      * @param uuid User UUID
      * @return page
+     * @since 1.0
      */
     @DeleteMapping("/admin/user/{uuid}/delete")
     public String deletePost(@PathVariable String uuid) {
@@ -156,9 +164,10 @@ public class AdminUserWebController {
 
     /**
      * Set common attributes
-     * @since 1.0
+     *
      * @param request HTTP servlet request
-     * @param model Model attributes
+     * @param model   Model attributes
+     * @since 1.0
      */
     private void setCommonAttributes(HttpServletRequest request, Model model) {
         String uri = request.getRequestURI();
@@ -168,9 +177,10 @@ public class AdminUserWebController {
 
     /**
      * Get rolles
-     * @since 1.0
+     *
      * @param roles User role
      * @return List of role names
+     * @since 1.0
      */
     private List<String> getRoles(UserRole[] roles) {
         return Arrays.stream(roles).map(Enum::toString).collect(Collectors.toList());

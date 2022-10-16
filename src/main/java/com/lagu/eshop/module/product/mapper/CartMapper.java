@@ -6,6 +6,7 @@ import com.lagu.eshop.module.user.mapper.UserMapper;
 
 /**
  * Cart mapper
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -13,9 +14,10 @@ public class CartMapper {
 
     /**
      * Form entity -> DTO
-     * @since 1.0
+     *
      * @param entity Cart entity
      * @return Cart DTO
+     * @since 1.0
      */
     public static CartDto map(CartEntity entity) {
         return new CartDto()

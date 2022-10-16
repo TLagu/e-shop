@@ -10,6 +10,7 @@ import java.util.Map;
 
 /**
  * Metadata and style generator for paging
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -23,8 +24,9 @@ public class PageWrapper {
 
     /**
      * Metadata and style generator for paging
-     * @since 1.0
+     *
      * @return List of paging items
+     * @since 1.0
      */
     public List<PageItem> getPageWrapper() {
         List<PageItem> pageItems = new ArrayList<>();
@@ -65,8 +67,9 @@ public class PageWrapper {
 
     /**
      * Get the URI of the current page
-     * @since 1.0
+     *
      * @return String current page uri
+     * @since 1.0
      */
     public String getCurrentPageUri() {
         setCurrentPage();
@@ -75,9 +78,10 @@ public class PageWrapper {
 
     /**
      * Set the page button status in paging
-     * @since 1.0
+     *
      * @param i Number of the page button being modified
      * @return Status of the page number button
+     * @since 1.0
      */
     private PageItem setPageSetup(int i) {
         return new PageItem(
@@ -88,9 +92,10 @@ public class PageWrapper {
 
     /**
      * Get the URI of the page
-     * @since 1.0
+     *
      * @param i Number of the page button being modified
      * @return String page uri
+     * @since 1.0
      */
     private String getPageUri(int i) {
         UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromUriString(url);
@@ -102,6 +107,7 @@ public class PageWrapper {
 
     /**
      * If the current page number is wrong, fix it
+     *
      * @since 1.0
      */
     private void setCurrentPage() {
@@ -114,6 +120,7 @@ public class PageWrapper {
 
     /**
      * Definition of button parameters in the paging tool
+     *
      * @since 1.0
      */
     @Getter

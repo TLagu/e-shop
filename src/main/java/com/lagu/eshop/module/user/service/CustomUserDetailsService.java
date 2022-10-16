@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 /**
  * Custom user detail service
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -22,10 +23,11 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     /**
      * Getting user by username
-     * @since 1.0
+     *
      * @param username Username string
      * @return User details
      * @throws UsernameNotFoundException
+     * @since 1.0
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

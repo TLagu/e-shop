@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 /**
  * Product form mapper
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -21,11 +22,12 @@ public class ProductFormMapper {
 
     /**
      * Map product form to product entity
-     * @since 1.0
-     * @param form Product Form
-     * @param category Category entity
+     *
+     * @param form       Product Form
+     * @param category   Category entity
      * @param attributes List of attribute entities
      * @return Product entity
+     * @since 1.0
      */
     public static ProductEntity map(ProductForm form, CategoryEntity category, Set<AttributeEntity> attributes) {
         return new ProductEntity()
@@ -43,11 +45,12 @@ public class ProductFormMapper {
 
     /**
      * Map Product entity to product form
-     * @since 1.0
+     *
      * @param entity Product entity
      * @return Product form
+     * @since 1.0
      */
-    public static ProductForm map (ProductEntity entity) {
+    public static ProductForm map(ProductEntity entity) {
         ProductForm form = new ProductForm()
                 .setUuid(entity.getUuid())
                 .setModel(entity.getModel())

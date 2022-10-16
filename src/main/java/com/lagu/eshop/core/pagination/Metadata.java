@@ -5,6 +5,7 @@ import lombok.Getter;
 
 /**
  * Metadata for displaying data on the page
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */

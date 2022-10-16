@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 /**
  * Order details service
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -33,10 +34,11 @@ public class OrderDetailsService {
 
     /**
      * Get order list
-     * @since 1.0
+     *
      * @param authentication Authentication
-     * @param uuid Order UUIDs
+     * @param uuid           Order UUIDs
      * @return List of order details
+     * @since 1.0
      */
     public List<OrderDetailsDto> getOrders(Authentication authentication, String uuid) {
         UserEntity user = userRepository.findByEmail(authentication.getName());

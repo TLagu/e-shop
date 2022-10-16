@@ -9,10 +9,11 @@ public class TemplateFormMapper {
 
     /**
      * Form mapping -> Entity
-     * @since 1.0
-     * @param form Template form
+     *
+     * @param form     Template form
      * @param category Category entity
      * @return Template entity
+     * @since 1.0
      */
     public static TemplateEntity map(TemplateForm form, CategoryEntity category) {
         return new TemplateEntity()
@@ -23,9 +24,10 @@ public class TemplateFormMapper {
 
     /**
      * Entity mapping -> Form
-     * @since 1.0
+     *
      * @param entity Template entity
      * @return Template form
+     * @since 1.0
      */
     public static TemplateForm map(TemplateEntity entity) {
         return new TemplateForm()

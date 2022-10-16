@@ -1,5 +1,6 @@
 package com.lagu.eshop.module.product.dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import javax.validation.constraints.Size;
@@ -7,10 +8,12 @@ import java.util.List;
 
 /**
  * Form for product categories
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Getter
+@EqualsAndHashCode
 public class CategoryForm {
 
     private Long id = 0L;
@@ -48,8 +51,9 @@ public class CategoryForm {
 
     /**
      * Object status verification (new/existing)
-     * @since 1.0
+     *
      * @return Status whether the object is new or existing
+     * @since 1.0
      */
     public boolean isNew() {
         return id == null || id == 0;

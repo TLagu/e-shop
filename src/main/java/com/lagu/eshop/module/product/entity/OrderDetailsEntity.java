@@ -1,5 +1,6 @@
 package com.lagu.eshop.module.product.entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -9,12 +10,14 @@ import java.time.LocalDateTime;
 
 /**
  * Order details entity
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Entity
 @Table(name = "order_details")
 @Getter
+@EqualsAndHashCode
 public class OrderDetailsEntity implements Serializable {
 
     @Id

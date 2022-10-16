@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 
 /**
  * Main user data
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */

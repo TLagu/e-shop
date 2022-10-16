@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * User service
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -31,10 +32,11 @@ public class UserService {
 
     /**
      * Getting user all users from specific page
-     * @since 1.0
+     *
      * @param page Page number
      * @param size The number of users on page
      * @return List of users
+     * @since 1.0
      */
     public ListResponse<UserDto> getAllPerPage(int page, int size) {
         Page<UserEntity> pageProduct = userRepository.findAll(PageRequest.of(page, size));
@@ -49,9 +51,10 @@ public class UserService {
 
     /**
      * Getting user by UUID
-     * @since 1.0
+     *
      * @param uuid UUID string
      * @return User (DTO)
+     * @since 1.0
      */
     public UserDto getDtoByUuid(String uuid) {
         return UserMapper.map(userRepository.getByUuid(uuid));
@@ -59,9 +62,10 @@ public class UserService {
 
     /**
      * Getting user by UUID
-     * @since 1.0
+     *
      * @param uuid UUID string
      * @return User (Form)
+     * @since 1.0
      */
     public UserForm getFormByUuid(String uuid) {
         return UserFormMapper.map(userRepository.getByUuid(uuid));
@@ -69,10 +73,11 @@ public class UserService {
 
     /**
      * Create or update user
-     * @since 1.0
-     * @param user User form
+     *
+     * @param user    User form
      * @param encoder Encoded password
      * @return User (DTO)
+     * @since 1.0
      */
     public UserDto createOrUpdate(UserForm user, BCryptPasswordEncoder encoder) {
         return (user.isNew()) ? create(user, encoder) : update(user, encoder);
@@ -80,8 +85,9 @@ public class UserService {
 
     /**
      * Delete user
-     * @since 1.0
+     *
      * @param uuid UUID string
+     * @since 1.0
      */
     public void delete(String uuid) {
         UserEntity entity = userRepository.getByUuid(uuid);
@@ -90,10 +96,11 @@ public class UserService {
 
     /**
      * Create user
-     * @since 1.0
+     *
      * @param userForm User form
-     * @param encoder Encoded password
+     * @param encoder  Encoded password
      * @return User (DTO)
+     * @since 1.0
      */
     private UserDto create(UserForm userForm, BCryptPasswordEncoder encoder) {
         UserRole userRole = UserRole.valueOf(userForm.getRole());
@@ -105,10 +112,11 @@ public class UserService {
 
     /**
      * Update user
-     * @since 1.0
+     *
      * @param userForm User form
-     * @param encoder Encoded password
+     * @param encoder  Encoded password
      * @return User (DTO)
+     * @since 1.0
      */
     private UserDto update(UserForm userForm, BCryptPasswordEncoder encoder) {
         UserRole userRole = ControllerTools.setEnumValue(UserRole.values(), UserRole.USER, userForm.getRole());
@@ -136,9 +144,10 @@ public class UserService {
 
     /**
      * Getting user by email
-     * @since 1.0
+     *
      * @param email Email string
      * @return User (DTO)
+     * @since 1.0
      */
     public UserDto getDtoByEmail(String email) {
         UserEntity userEntity = userRepository.findByEmail(email);
@@ -147,9 +156,10 @@ public class UserService {
 
     /**
      * Getting user by email
-     * @since 1.0
+     *
      * @param email Email string
      * @return User (form)
+     * @since 1.0
      */
     public UserForm getFormByEmail(String email) {
         UserEntity userEntity = userRepository.findByEmail(email);
@@ -158,11 +168,12 @@ public class UserService {
 
     /**
      * Save user
-     * @since 1.0
+     *
      * @param userForm User form
-     * @param contact Contact
-     * @param encoder Encoded password
+     * @param contact  Contact
+     * @param encoder  Encoded password
      * @return User entity
+     * @since 1.0
      */
     public UserEntity save(UserForm userForm, ContactType contact, BCryptPasswordEncoder encoder) {
         UserEntity userEntity = UserFormMapper.map(userForm, UserRole.USER, contact, encoder);

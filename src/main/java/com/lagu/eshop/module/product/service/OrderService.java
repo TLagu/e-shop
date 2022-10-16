@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 /**
  * Order service
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -44,6 +45,7 @@ public class OrderService {
 
     /**
      * Get initial order
+     *
      * @param authentication Authentication
      * @return Order DTO
      */
@@ -62,10 +64,11 @@ public class OrderService {
 
     /**
      * Save order
-     * @since 1.0
-     * @param orderDto Order DTO
+     *
+     * @param orderDto       Order DTO
      * @param authentication Authentication
      * @return TRUE/FALSE
+     * @since 1.0
      */
     public boolean saveOrder(OrderDto orderDto, Authentication authentication) {
         UserEntity user = userRepository.findByEmail(authentication.getName());
@@ -96,9 +99,10 @@ public class OrderService {
 
     /**
      * Get user orders
-     * @since 1.0
+     *
      * @param authentication Authentication
      * @return List of user DTOs
+     * @since 1.0
      */
     public List<OrderDto> getUserOrders(Authentication authentication) {
         UserEntity user = userRepository.findByEmail(authentication.getName());
@@ -110,10 +114,11 @@ public class OrderService {
 
     /**
      * Get order by UUID
-     * @since 1.0
+     *
      * @param authentication Authentication
-     * @param uuid Order UUID
+     * @param uuid           Order UUID
      * @return Order DTO
+     * @since 1.0
      */
     public OrderDto getOrderByUuid(Authentication authentication, String uuid) {
         UserEntity user = userRepository.findByEmail(authentication.getName());

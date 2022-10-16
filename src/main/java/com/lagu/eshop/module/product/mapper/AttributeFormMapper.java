@@ -7,6 +7,7 @@ import com.lagu.eshop.module.product.entity.Status;
 
 /**
  * Attribute form mapper
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -14,10 +15,11 @@ public class AttributeFormMapper {
 
     /**
      * Map the attribute form to the attribute entity
-     * @since 1.0
-     * @param form Attribute form
+     *
+     * @param form    Attribute form
      * @param product Product entity
      * @return Attribute entity
+     * @since 1.0
      */
     public static AttributeEntity map(AttributeForm form, ProductEntity product) {
         return new AttributeEntity()
@@ -31,11 +33,12 @@ public class AttributeFormMapper {
 
     /**
      * Map the attribute entity to the attribute form
-     * @since 1.0
+     *
      * @param entity Attribute entity
      * @return Attribute form
+     * @since 1.0
      */
-    public static AttributeForm map (AttributeEntity entity) {
+    public static AttributeForm map(AttributeEntity entity) {
         return new AttributeForm()
                 .setId(entity.getId())
                 .setProduct(entity.getProduct().getId())

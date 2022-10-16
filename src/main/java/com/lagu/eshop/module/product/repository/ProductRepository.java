@@ -13,6 +13,7 @@ import java.util.Optional;
 
 /**
  * Product repository
+ *
  * @author Tomasz Łagowski
  * @version 1.2
  */
@@ -20,18 +21,20 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long>, J
 
     /**
      * Getting products in random order
-     * @since 1.0
+     *
      * @param pageable Paging metadata
      * @return List of products
+     * @since 1.0
      */
     @Query("SELECT p FROM ProductEntity p ORDER BY RAND()")
     List<ProductEntity> findRandomForHeader(Pageable pageable);
 
     /**
      * Search for a product by name or description
-     * @since 1.0
+     *
      * @param searchText Search text
      * @return List of products
+     * @since 1.0
      */
     @Query("SELECT p FROM ProductEntity p " +
             " WHERE LOWER(p.model) LIKE ('%' || LOWER(:searchText) || '%') " +
@@ -40,27 +43,30 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long>, J
 
     /**
      * Search by categories
-     * @since 1.1
-     * @param ids Category ID list
+     *
+     * @param ids      Category ID list
      * @param pageable Paging metadata
      * @return List of products
+     * @since 1.1
      */
     @Query("SELECT p FROM ProductEntity p WHERE p.category IN :ids")
     Page<ProductEntity> findByCategories(List<CategoryEntity> ids, Pageable pageable);
 
     /**
      * Getting product by UUID
-     * @since 1.1
+     *
      * @param uuid Product UUID
      * @return Product
+     * @since 1.1
      */
     ProductEntity getByUuid(String uuid);
 
     /**
      * Find product entity by UUID
-     * @since 1.2
+     *
      * @param uuid Product UUID
      * @return Product entity
+     * @since 1.2
      */
     Optional<ProductEntity> findByUuid(String uuid);
 

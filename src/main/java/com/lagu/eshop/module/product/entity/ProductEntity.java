@@ -1,5 +1,6 @@
 package com.lagu.eshop.module.product.entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
@@ -13,6 +14,7 @@ import java.util.Set;
 
 /**
  * Product
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -21,6 +23,7 @@ import java.util.Set;
 @SQLDelete(sql = "UPDATE product SET status = 'DELETED' WHERE id = ?")
 @Where(clause = "status = 'ACTIVE'")
 @Getter
+@EqualsAndHashCode
 public class ProductEntity implements Serializable {
 
     @Id

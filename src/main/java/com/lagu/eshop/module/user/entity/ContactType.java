@@ -2,6 +2,7 @@ package com.lagu.eshop.module.user.entity;
 
 /**
  * Contact type
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */

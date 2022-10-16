@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 /**
  * Attribute mapper (Form)
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -19,11 +20,12 @@ public class CategoryFormMapper {
 
     /**
      * Form mapping -> Entity
-     * @since 1.0
-     * @param form Category form
-     * @param parent Parent category entity
+     *
+     * @param form      Category form
+     * @param parent    Parent category entity
      * @param templates Template entity
      * @return Category entity
+     * @since 1.0
      */
     public static CategoryEntity map(CategoryForm form, CategoryEntity parent,
                                      Set<TemplateEntity> templates) {
@@ -37,9 +39,10 @@ public class CategoryFormMapper {
 
     /**
      * Entity mapping -> Form
-     * @since 1.0
+     *
      * @param entity Category entity
      * @return Category form
+     * @since 1.0
      */
     public static CategoryForm map(CategoryEntity entity) {
         CategoryForm form = new CategoryForm()

@@ -1,15 +1,18 @@
 package com.lagu.eshop.module.product.dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import javax.validation.constraints.Size;
 
 /**
  * Form for template
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Getter
+@EqualsAndHashCode
 public class TemplateForm {
 
     private Long id;
@@ -40,8 +43,9 @@ public class TemplateForm {
 
     /**
      * Object status verification (new/existing)
-     * @since 1.0
+     *
      * @return Status whether the object is new or existing
+     * @since 1.0
      */
     public boolean isNew() {
         return id == null || id == 0;

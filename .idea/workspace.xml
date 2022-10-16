@@ -5,15 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7a9e88-f1b0-4f8d-a753-f281195b3b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/user/AdminUserWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-user-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-user-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/admin-user-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-user-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-user-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/components/admin-user-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/AttributeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/AttributeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/AttributeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/AttributeForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CartDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CartDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CartForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CartForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CategoryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CategoryForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/CategoryForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDetailsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDetailsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/PageSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/PageSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/ProductForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/TemplateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/TemplateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/TemplateForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/dto/TemplateForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/entity/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/user/dto/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/user/dto/UserForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/EShopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/EShopApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/CategoryFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/CategoryFormTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/ProductFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/ProductFormTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/TemplateFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/dto/TemplateFormTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/service/CartServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lagu/eshop/module/product/service/CartServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -36,6 +49,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="outputLevel" value="WARN" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -54,6 +68,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "E:/praca/java/eshop/eshop/src/main/resources/templates/shop",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -84,8 +100,16 @@
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static\images" />
       <recent name="E:\praca\java\eshop\eshop\src\main\resources\static" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.lagu.eshop.module.product.service" />
+      <recent name="com.lagu.eshop.module.product.mapper" />
+      <recent name="com.lagu.eshop.module.product.dto" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.EShopApplication-postgresql">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="shop" />
       <method v="2">
@@ -99,6 +123,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="shop [test]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings">
+          <MavenGeneralSettings>
+            <option name="alwaysUpdateSnapshots" value="false" />
+            <option name="checksumPolicy" value="NOT_SET" />
+            <option name="failureBehavior" value="NOT_SET" />
+            <option name="localRepository" value="" />
+            <option name="mavenHome" value="Bundled (Maven 3)" />
+            <option name="nonRecursive" value="false" />
+            <option name="outputLevel" value="WARN" />
+            <option name="pluginUpdatePolicy" value="DEFAULT" />
+            <option name="printErrorStackTraces" value="false" />
+            <option name="showDialogWithAdvancedSettings" value="false" />
+            <option name="threads" />
+            <option name="useMavenConfig" value="true" />
+            <option name="usePluginRegistry" value="false" />
+            <option name="userSettingsFile" value="" />
+            <option name="workOffline" value="false" />
+          </MavenGeneralSettings>
+        </option>
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="#USE_PROJECT_JDK" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="EShopApplication-postgresql" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" value="postgresql" />
       <module name="shop" />
@@ -107,6 +189,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Maven.shop [test]" />
+      <item itemvalue="Spring Boot.EShopApplication-postgresql" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -116,7 +202,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665688602108</updated>
-      <workItem from="1665688604702" duration="95934000" />
+      <workItem from="1665688604702" duration="132150000" />
     </task>
     <servers />
   </component>
@@ -139,7 +225,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lagu/eshop/core/pagination/PageWrapper.java</url>
-          <line>31</line>
+          <line>33</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -149,12 +235,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/ProductService.java</url>
-          <line>159</line>
+          <line>168</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lagu/eshop/module/product/service/ProductService.java</url>
-          <line>139</line>
+          <line>147</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

@@ -11,19 +11,20 @@ import java.util.function.Consumer;
 
 /**
  * Service tool
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 public class ServiceTools {
 
     /**
-     * @since 1.0
-     * @param uuid Product UUID
-     * @param email User email
-     * @param consumer Consumer
-     * @param userRepository User repository
+     * @param uuid              Product UUID
+     * @param email             User email
+     * @param consumer          Consumer
+     * @param userRepository    User repository
      * @param productRepository Product repository
-     * @param cartRepository Cart repository
+     * @param cartRepository    Cart repository
+     * @since 1.0
      */
     public static void changeAmount(
             String uuid,

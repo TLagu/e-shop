@@ -11,6 +11,7 @@ import java.util.UUID;
 
 /**
  * User mapper (Form)
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -18,12 +19,13 @@ public class UserFormMapper {
 
     /**
      * Form mapping -> Entity
-     * @since 1.0
+     *
      * @param userForm User form
      * @param userRole User role
-     * @param contact Contact type
-     * @param encoder Encoded password
+     * @param contact  Contact type
+     * @param encoder  Encoded password
      * @return User entity
+     * @since 1.0
      */
     public static UserEntity map(UserForm userForm, UserRole userRole, ContactType contact, BCryptPasswordEncoder encoder) {
         UserEntity userEntity = new UserEntity()
@@ -50,11 +52,12 @@ public class UserFormMapper {
 
     /**
      * Entity mapping -> Form
-     * @since 1.0
+     *
      * @param entity User entity
      * @return User form
+     * @since 1.0
      */
-    public static UserForm map (UserEntity entity) {
+    public static UserForm map(UserEntity entity) {
         return new UserForm()
                 .setUuid(entity.getUuid())
                 .setEmail(entity.getEmail())

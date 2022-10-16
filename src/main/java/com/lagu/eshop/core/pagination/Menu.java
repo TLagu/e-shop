@@ -5,6 +5,7 @@ import lombok.Getter;
 
 /**
  * Object containing css/html parameters for menu display
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */

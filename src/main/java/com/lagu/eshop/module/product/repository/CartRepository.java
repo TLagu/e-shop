@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * Cart repository
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -17,18 +18,20 @@ public interface CartRepository extends JpaRepository<CartEntity, Long>, JpaSpec
 
     /**
      * Find cart by user and product
-     * @since 1.0
-     * @param user User entity
+     *
+     * @param user    User entity
      * @param product Product
      * @return Cart
+     * @since 1.0
      */
     CartEntity findByUserAndProduct(UserEntity user, ProductEntity product);
 
     /**
      * Find cart by user order by product
-     * @since 1.0
+     *
      * @param user User entity
      * @return List of cart
+     * @since 1.0
      */
     List<CartEntity> findByUserOrderByProduct(UserEntity user);
 

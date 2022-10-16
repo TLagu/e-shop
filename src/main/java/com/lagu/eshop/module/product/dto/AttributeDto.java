@@ -1,13 +1,16 @@
 package com.lagu.eshop.module.product.dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 /**
  * DTO for additional product attributes
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
 @Getter
+@EqualsAndHashCode
 public class AttributeDto {
     private Long id;
     private String name;
@@ -27,4 +30,5 @@ public class AttributeDto {
         this.description = description;
         return this;
     }
+
 }

@@ -6,9 +6,10 @@ import java.util.List;
 
 /**
  * An object that stores the data necessary to display paged data
+ *
+ * @param <T> List of objects displayed on the screen
  * @author Tomasz Łagowski
  * @version 1.0
- * @param <T> List of objects displayed on the screen
  */
 @Getter
 public class ListResponse<T> {

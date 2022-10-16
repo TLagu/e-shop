@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Order repository
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -16,18 +17,20 @@ public interface OrderRepository extends JpaRepository<OrderEntity, Long>, JpaSp
 
     /**
      * Find order by user and order by created date
-     * @since 1.0
+     *
      * @param user User entity
      * @return List of order entity
+     * @since 1.0
      */
     List<OrderEntity> findByUserOrderByCreatedOn(UserEntity user);
 
     /**
      * Get order entity by user end UUID
-     * @since 1.0
+     *
      * @param user User entity
      * @param uuid UUID
      * @return Order entity
+     * @since 1.0
      */
     OrderEntity getByUserAndUuid(UserEntity user, String uuid);
 }

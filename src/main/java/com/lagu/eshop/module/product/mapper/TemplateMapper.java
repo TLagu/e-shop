@@ -5,6 +5,7 @@ import com.lagu.eshop.module.product.entity.TemplateEntity;
 
 /**
  * Template mapper (DTO)
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -12,9 +13,10 @@ public class TemplateMapper {
 
     /**
      * Entity mapping -> DTO
-     * @since 1.0
+     *
      * @param entity Template entity
      * @return Template DTO
+     * @since 1.0
      */
     public static TemplateDto map(TemplateEntity entity) {
         return new TemplateDto()

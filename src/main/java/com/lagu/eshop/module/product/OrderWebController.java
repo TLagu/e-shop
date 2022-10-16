@@ -17,6 +17,7 @@ import java.util.List;
 
 /**
  * Order Web COntroller
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -45,11 +46,12 @@ public class OrderWebController {
 
     /**
      * Order page
-     * @since 1.0
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/order"})
     public String list(
@@ -66,12 +68,13 @@ public class OrderWebController {
 
     /**
      * Order detail
-     * @since 1.0
-     * @param uuid Order UUID
-     * @param request HTTP Servlet Request
-     * @param model Model attributes
+     *
+     * @param uuid           Order UUID
+     * @param request        HTTP Servlet Request
+     * @param model          Model attributes
      * @param authentication Authentication
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/order/details/{uuid}"})
     public String details(
@@ -89,9 +92,10 @@ public class OrderWebController {
 
     /**
      * Common model settings
-     * @since 1.0
-     * @param model Model attributes
+     *
+     * @param model          Model attributes
      * @param authentication Authentication
+     * @since 1.0
      */
     private void setCommonModelSettings(Model model, Authentication authentication) {
         ControllerTools.setCommonModelSettings(model, authentication, httpSession, userService,

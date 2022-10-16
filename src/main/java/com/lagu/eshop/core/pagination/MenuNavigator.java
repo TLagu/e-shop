@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * Object used to build the menu
+ *
  * @author Tomasz Łagowski
  * @version 1.1
  */
@@ -42,10 +43,11 @@ public class MenuNavigator {
 
     /**
      * The method that generates the bottom menu content for the user
-     * @since 1.0
-     * @param url Relative website address
+     *
+     * @param url      Relative website address
      * @param isLogged Login status
      * @return Menu data list
+     * @since 1.0
      */
     public List<Menu> getUserBottomMenu(String url, boolean isLogged) {
         return getMenu(url, (isLogged) ? loggedUserBottomMenu : userBottomMenu);
@@ -53,10 +55,11 @@ public class MenuNavigator {
 
     /**
      * The method that generates the Middle menu content for the user
-     * @since 1.0
-     * @param url Relative website address
+     *
+     * @param url      Relative website address
      * @param isLogged Login status
      * @return Menu data list
+     * @since 1.0
      */
     public List<Menu> getUserMiddleMenu(String url, boolean isLogged) {
         return getMenu(url, (isLogged) ? loggedUserMiddleMenu : userMiddleMenu);
@@ -64,9 +67,10 @@ public class MenuNavigator {
 
     /**
      * The method that generates the bottom menu content for the admin
-     * @since 1.1
+     *
      * @param url Relative website address
      * @return Menu data list
+     * @since 1.1
      */
     public List<Menu> getAdminBottomMenu(String url) {
         return getMenu(url, new ArrayList<>());
@@ -74,9 +78,10 @@ public class MenuNavigator {
 
     /**
      * The method that generates the middle menu content for the admin
-     * @since 1.1
+     *
      * @param url Relative website address
      * @return Menu data list
+     * @since 1.1
      */
     public List<Menu> getAdminMiddleMenu(String url) {
         return getMenu(url, loggedAdminMiddleMenu);
@@ -84,10 +89,11 @@ public class MenuNavigator {
 
     /**
      * Sets the style of the active page in the menu
-     * @since 1.0
-     * @param url Relative website address
+     *
+     * @param url  Relative website address
      * @param menu List of menu items
      * @return Menu data list
+     * @since 1.0
      */
     public List<Menu> getMenu(String url, List<Menu> menu) {
         for (Menu menuItem : menu) {

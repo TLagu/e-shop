@@ -15,6 +15,7 @@ import java.util.Optional;
 
 /**
  * Custom user handler
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -23,12 +24,13 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
 
     /**
      * Behavior if successful login is successful
-     * @since 1.0
-     * @param request HTTP servlet request
-     * @param response HTTP servlet response
+     *
+     * @param request        HTTP servlet request
+     * @param response       HTTP servlet response
      * @param authentication Authentication
      * @throws IOException
      * @throws ServletException
+     * @since 1.0
      */
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,

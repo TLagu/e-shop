@@ -15,6 +15,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 
 /**
  * Web security configuration
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -32,8 +33,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * User detail service
-     * @since 1.0
+     *
      * @return Customization user detail service
+     * @since 1.0
      */
     @Bean
     @Override
@@ -43,8 +45,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * Password encryption
-     * @since 1.0
+     *
      * @return Encrypted password
+     * @since 1.0
      */
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -53,8 +56,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * Authentication
-     * @since 1.0
+     *
      * @return Authentication provider
+     * @since 1.0
      */
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
@@ -66,9 +70,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * Setting authentication provider
-     * @since 1.0
+     *
      * @param auth Authentication builder manager
      * @throws Exception
+     * @since 1.0
      */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -77,9 +82,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * Authentication configuration
-     * @since 1.0
+     *
      * @param http HTTP security
      * @throws Exception
+     * @since 1.0
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {

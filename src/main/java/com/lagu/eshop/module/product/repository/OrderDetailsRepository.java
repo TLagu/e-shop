@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Order details repository
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -16,9 +17,10 @@ public interface OrderDetailsRepository extends JpaRepository<OrderDetailsEntity
 
     /**
      * Find orders by product
-     * @since 1.0
+     *
      * @param order Order entity
      * @return List of order details
+     * @since 1.0
      */
     List<OrderDetailsEntity> findByOrderOrderByProduct(OrderEntity order);
 

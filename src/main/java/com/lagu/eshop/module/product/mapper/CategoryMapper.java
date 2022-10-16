@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 /**
  * Category mapper (DTO)
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -17,10 +18,11 @@ public class CategoryMapper {
 
     /**
      * Entity mapping -> DTO
-     * @since 1.0
-     * @param entity Category entity
+     *
+     * @param entity   Category entity
      * @param template Template entity
      * @return Category DTO
+     * @since 1.0
      */
     public static CategoryDto map(CategoryEntity entity, TemplateEntity template) {
         if (entity == null) {
@@ -41,9 +43,10 @@ public class CategoryMapper {
 
     /**
      * List of entity mapping -> list of DTO
-     * @since 1.0
+     *
      * @param entities Template entity
      * @return Template DTO
+     * @since 1.0
      */
     public static List<TemplateDto> map(List<TemplateEntity> entities) {
         return entities.stream()

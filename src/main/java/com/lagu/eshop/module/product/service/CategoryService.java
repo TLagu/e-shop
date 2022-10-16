@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 
 /**
  * Category service
+ *
  * @author Tomasz Łagowski
  * @version 1.1
  */
@@ -35,8 +36,9 @@ public class CategoryService {
 
     /**
      * Downloading a list of categories and subcategories
-     * @since 1.0
+     *
      * @return List of category
+     * @since 1.0
      */
     public List<CategoryEntity> getMainCategoryWithSubcategories() {
         return categoryRepository.findByParentIsNullOrderByName();
@@ -44,8 +46,9 @@ public class CategoryService {
 
     /**
      * Getting a list of all categories (DTO)
-     * @since 1.0
+     *
      * @return List of category
+     * @since 1.0
      */
     public List<CategoryDto> getAll() {
         List<CategoryEntity> categories = categoryRepository.findAll();
@@ -54,6 +57,7 @@ public class CategoryService {
 
     /**
      * Getting a category by ID (DTO)
+     *
      * @param id Category ID
      * @return Category
      */
@@ -64,9 +68,10 @@ public class CategoryService {
 
     /**
      * Getting a category by ID (Form)
-     * @since 1.0
+     *
      * @param id Category ID
      * @return Category
+     * @since 1.0
      */
     public CategoryForm getFormById(Long id) {
         Optional<CategoryEntity> entity = categoryRepository.findById(id);
@@ -75,8 +80,9 @@ public class CategoryService {
 
     /**
      * Get a list of main categories
-     * @since 1.0
+     *
      * @return List of categories (DTO)
+     * @since 1.0
      */
     public List<CategoryDto> getByParentIsNull() {
         List<CategoryEntity> categories = categoryRepository.findByParentIsNullOrderByName();
@@ -85,9 +91,10 @@ public class CategoryService {
 
     /**
      * Retrieving a list of main categories without specified
-     * @since 1.0
+     *
      * @param id Category ID
      * @return List of categories (DTO)
+     * @since 1.0
      */
     public List<CategoryDto> getByParentIsNullAndIdNot(Long id) {
         List<CategoryEntity> categories = categoryRepository.findByParentIsNullAndIdIsNotOrderByName(id);
@@ -102,9 +109,9 @@ public class CategoryService {
     }
 
     /**
-     * @since 1.1
      * @param categoryForm Category form
      * @return Category entity
+     * @since 1.1
      */
     public CategoryEntity create(CategoryForm categoryForm) {
         Optional<CategoryEntity> parent = categoryRepository.findById(categoryForm.getParent());
@@ -115,10 +122,11 @@ public class CategoryService {
 
     /**
      * Update category
-     * @since 1.1
-     * @param id Parent category ID
+     *
+     * @param id           Parent category ID
      * @param categoryForm Category form
      * @return Category entity
+     * @since 1.1
      */
     public CategoryEntity update(Long id, CategoryForm categoryForm) {
         CategoryEntity parent = categoryRepository.findById(categoryForm.getParent()).orElse(null);
@@ -142,8 +150,9 @@ public class CategoryService {
 
     /**
      * Delete category
-     * @since 1.1
+     *
      * @param id Category ID
+     * @since 1.1
      */
     public void delete(Long id) {
         CategoryEntity entity = categoryRepository.getById(id);

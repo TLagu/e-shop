@@ -7,6 +7,7 @@ import javax.validation.constraints.Size;
 
 /**
  * Form for main user data
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -16,8 +17,8 @@ public class UserForm {
     private String status;
     private String uuid;
     //    @Size(min = 6, max = 45, message = "Długość powinny być pomiędzy 6 i 45")
-//    @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$"
-//            , message = "Niepoprawny format maila")
+    //    @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$"
+    //            , message = "Niepoprawny format maila")
     private String email;
     //    @Size(min = 3, max = 20, message = "Długość powinny być pomiędzy 3 i 20")
     private String password;
@@ -118,8 +119,9 @@ public class UserForm {
 
     /**
      * Object status verification (new/existing)
-     * @since 1.0
+     *
      * @return Status whether the object is new or existing
+     * @since 1.0
      */
     public boolean isNew() {
         return uuid == null || uuid.isBlank();

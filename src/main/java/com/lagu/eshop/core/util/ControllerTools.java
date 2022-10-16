@@ -19,6 +19,7 @@ import java.util.function.Function;
 
 /**
  * Tool for managing common parameters of the Model
+ *
  * @author Tomasz Łagowski
  * @version 1.3
  */
@@ -26,13 +27,14 @@ public class ControllerTools {
 
     /**
      * Setting common parameters of the Model
-     * @since 1.1
-     * @param model Model attributes
+     *
+     * @param model          Model attributes
      * @param authentication Security information
-     * @param httpSession HTTP Session
-     * @param objectMapper Object Mapper
-     * @param isLogged Login status
-     * @param uri URI of the current page
+     * @param httpSession    HTTP Session
+     * @param objectMapper   Object Mapper
+     * @param isLogged       Login status
+     * @param uri            URI of the current page
+     * @since 1.1
      */
     public static void setCommonModelSettings(
             Model model,
@@ -49,9 +51,10 @@ public class ControllerTools {
 
     /**
      * Verifying that the user is logged in
-     * @since 1.1
+     *
      * @param authentication Security information
      * @return Is logged? (True/False)
+     * @since 1.1
      */
     public static boolean isLogged(Authentication authentication) {
         return authentication != null && authentication.isAuthenticated();
@@ -59,12 +62,13 @@ public class ControllerTools {
 
     /**
      * Replace text value with proper enum
-     * @since 1.2
-     * @param enumArray Array of enum values
+     *
+     * @param enumArray   Array of enum values
      * @param enumDefault The default if no match is found
-     * @param enumText Search text
+     * @param enumText    Search text
+     * @param <R>         Enum type
      * @return Enum value
-     * @param <R> Enum type
+     * @since 1.2
      */
     public static <R> R setEnumValue(R[] enumArray, R enumDefault, String enumText) {
         for (R enumItem : enumArray) {
@@ -77,10 +81,11 @@ public class ControllerTools {
 
     /**
      * Get all text values from an enum
-     * @since 1.2
+     *
      * @param enumArray Array of enum values
+     * @param <R>       Enum type
      * @return List of all text values from enum
-     * @param <R> Enum type
+     * @since 1.2
      */
     public static <R> List<String> getEnumAsStringList(R[] enumArray) {
         List<String> listSting = new ArrayList<>();
@@ -92,9 +97,10 @@ public class ControllerTools {
 
     /**
      * Redirect to shop (with params)
-     * @since 1.3
+     *
      * @param httpSession HTTP session
      * @return Model and view
+     * @since 1.3
      */
     public static ModelAndView redirectToShop(HttpSession httpSession) {
         UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromUriString("/shop");
@@ -114,8 +120,9 @@ public class ControllerTools {
 
     /**
      * Redirect to shop
-     * @since 1.3
+     *
      * @return Model and view
+     * @since 1.3
      */
     public static ModelAndView redirectToShop() {
         return new ModelAndView("redirect:/shop");
@@ -123,12 +130,13 @@ public class ControllerTools {
 
     /**
      * Add or remove
-     * @since 1.3
-     * @param uuid UUID
+     *
+     * @param uuid           UUID
      * @param authentication Authentication
-     * @param action Bi consumer
-     * @param httpSession HTTP session
+     * @param action         Bi consumer
+     * @param httpSession    HTTP session
      * @return Model and view
+     * @since 1.3
      */
     public static ModelAndView addOrRemove(
             String uuid,
@@ -145,12 +153,13 @@ public class ControllerTools {
 
     /**
      * Set product as added
-     * @since 1.3
-     * @param products List of products
+     *
+     * @param products       List of products
      * @param authentication Authentication
-     * @param service Function
-     * @param setValue Bi consumer
+     * @param service        Function
+     * @param setValue       Bi consumer
      * @return List of products
+     * @since 1.3
      */
     public static List<ProductDto> setProductAsAdded(
             List<ProductDto> products,

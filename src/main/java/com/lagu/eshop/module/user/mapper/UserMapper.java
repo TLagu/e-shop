@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 /**
  * User mapper (DTO)
+ *
  * @author Tomasz Łagowski
  * @version 1.0
  */
@@ -15,9 +16,10 @@ public class UserMapper {
 
     /**
      * Entity mapping to the DTO
-     * @since 1.0
+     *
      * @param entity User entity
      * @return User DTO
+     * @since 1.0
      */
     public static UserDto map(UserEntity entity) {
         if (entity == null) {
@@ -42,9 +44,10 @@ public class UserMapper {
 
     /**
      * List of entities mapping to the list of DTOs
-     * @since 1.0
+     *
      * @param entities List of user entities
      * @return List of user DTOs
+     * @since 1.0
      */
     public static List<UserDto> map(List<UserEntity> entities) {
         return entities.stream()

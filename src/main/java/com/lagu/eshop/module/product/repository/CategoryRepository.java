@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * Category repository
+ *
  * @author Tomasz Łagowski
  * @version 1
  */
@@ -17,9 +18,10 @@ public interface CategoryRepository extends JpaRepository<CategoryEntity, Long>,
 
     /**
      * Getting of categories with subcategories
-     * @since 1.0
+     *
      * @param categoryId Category ID
      * @return List of categories
+     * @since 1.0
      */
     @Query(
             value = "WITH RECURSIVE" +
@@ -41,16 +43,18 @@ public interface CategoryRepository extends JpaRepository<CategoryEntity, Long>,
 
     /**
      * Get the main categories sorted by name
-     * @since 1.0
+     *
      * @return List of categories
+     * @since 1.0
      */
     List<CategoryEntity> findByParentIsNullOrderByName();
 
     /**
      * Getting the main categories (except the given one) sorted by name
-     * @since 1.0
+     *
      * @param id Category ID
      * @return List of categories
+     * @since 1.0
      */
     List<CategoryEntity> findByParentIsNullAndIdIsNotOrderByName(Long id);
 

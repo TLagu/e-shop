@@ -27,6 +27,7 @@ import java.util.Map;
 
 /**
  * Product web controller
+ *
  * @author Tomasz Łagowski
  * @version 1.4
  */
@@ -63,11 +64,12 @@ public class ProductWebController {
 
     /**
      * Root and home page
-     * @since 1.0
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Security information
      * @return page
+     * @since 1.0
      */
     @GetMapping({"/", "/home"})
     public String slider(
@@ -84,11 +86,12 @@ public class ProductWebController {
 
     /**
      * Contact page
-     * @since 1.2
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Security information
      * @return page
+     * @since 1.2
      */
     @GetMapping({"/contact"})
     public String contact(
@@ -103,14 +106,15 @@ public class ProductWebController {
 
     /**
      * Shop page
-     * @since 1.1
-     * @param page Page number
-     * @param size Number of products on the page
-     * @param category Category
-     * @param model Model attributes
-     * @param request Http Servlet Request
+     *
+     * @param page           Page number
+     * @param size           Number of products on the page
+     * @param category       Category
+     * @param model          Model attributes
+     * @param request        Http Servlet Request
      * @param authentication Security information
      * @return page
+     * @since 1.1
      */
     @GetMapping(value = {"/shop"})
     public String list(
@@ -153,12 +157,13 @@ public class ProductWebController {
 
     /**
      * Product details
-     * @since 1.2
-     * @param uuid Project UUID
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param uuid           Project UUID
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Security information
      * @return page
+     * @since 1.2
      */
     @GetMapping(value = {"/shop/details/{uuid}"})
     public String details(
@@ -178,12 +183,13 @@ public class ProductWebController {
 
     /**
      * Search product by string
-     * @since 1.2
-     * @param search Search string
-     * @param model Model attributes
-     * @param request HTTP Servlet Request
+     *
+     * @param search         Search string
+     * @param model          Model attributes
+     * @param request        HTTP Servlet Request
      * @param authentication Security information
      * @return page
+     * @since 1.2
      */
     @PostMapping(value = {"/shop"})
     public String search(String search, Model model, HttpServletRequest request,
@@ -204,9 +210,10 @@ public class ProductWebController {
 
     /**
      * Common page setup
-     * @since 1.1
-     * @param request HTTP Servlet Request
+     *
+     * @param request        HTTP Servlet Request
      * @param authentication Security information
+     * @since 1.1
      */
     private void setPageSetup(HttpServletRequest request, Authentication authentication) {
         this.uri = request.getRequestURI();
@@ -215,9 +222,10 @@ public class ProductWebController {
 
     /**
      * Common model settings
-     * @since 1.1
-     * @param model Model attributes
+     *
+     * @param model          Model attributes
      * @param authentication Security information
+     * @since 1.1
      */
     private void setCommonModelSettings(Model model, Authentication authentication) {
         ControllerTools.setCommonModelSettings(model, authentication, httpSession, userService,

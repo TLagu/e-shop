@@ -9,8 +9,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class EShopApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(EShopApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(EShopApplication.class, args);
+    }
 
 }
